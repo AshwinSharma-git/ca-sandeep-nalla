@@ -74,78 +74,115 @@ export type ServicePage = {
   cta: { headline: string; sub: string; label: string };
 };
 
-// Curated, reusable image set (Unsplash, royalty-free hot-link)
+// Curated, reusable image set (Unsplash, verified stable IDs).
+// Each key represents a distinct visual concept — pages must not reuse the same
+// key within a single page. Format=auto + width=1600 keeps payload small.
+const U = (id: string) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&q=80&w=1600`;
+
 const img = {
-  business:
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600",
-  team: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1600",
-  meeting:
-    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1600",
-  growth:
-    "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1600",
-  signing:
-    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1600",
-  audit:
-    "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1600",
-  desk: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&q=80&w=1600",
-  warning:
-    "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&q=80&w=1600",
-  partnership:
-    "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600",
-  startup:
-    "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1600",
-  taxFiling:
-    "https://images.unsplash.com/photo-1586486855514-8c633cc6fd29?auto=format&fit=crop&q=80&w=1600",
-  community:
-    "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=1600",
-  factory:
-    "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&q=80&w=1600",
-  exports:
-    "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&q=80&w=1600",
-  notice:
-    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1600",
-  refund:
-    "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=1600",
-  laptop:
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
-  shop: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&q=80&w=1600",
-  charity:
-    "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=1600",
-  ledger:
-    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1600",
-  computer:
-    "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&q=80&w=1600",
-  scale:
-    "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1600",
-  // Newly added distinct images for split pages
-  piggyBank:
-    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&q=80&w=1600",
-  insurance:
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1600",
-  investor:
-    "https://images.unsplash.com/photo-1573164574230-db1d5e960238?auto=format&fit=crop&q=80&w=1600",
-  community2:
-    "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=1600",
-  govtBuilding:
-    "https://images.unsplash.com/photo-1541872703-74c5e44368f1?auto=format&fit=crop&q=80&w=1600",
-  handshake:
-    "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1600",
-  charity2:
-    "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1600",
-  retirement:
-    "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&q=80&w=1600",
-  documents:
-    "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&q=80&w=1600",
-  startupInvest:
-    "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1600",
-  email:
-    "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=1600",
-  refundCash:
-    "https://images.unsplash.com/photo-1559526324-c1f275fbfa32?auto=format&fit=crop&q=80&w=1600",
-  trust:
-    "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&q=80&w=1600",
-  payroll:
-    "https://images.unsplash.com/photo-1554224155-3a589877b5f1?auto=format&fit=crop&q=80&w=1600",
+  // ── Business / Office ─────────────────────────────────────────────
+  pvtLtdOffice: U("photo-1497366216548-37526070297c"), // glass corporate office
+  llpPartners: U("photo-1573497019940-1c28c88b4f3e"), // two partners discussing
+  partnershipDeed: U("photo-1521737711867-e3b97375f902"), // partnership desk
+  opcSolo: U("photo-1531973576160-7125cd663d86"), // solo founder at laptop
+  proprietorshipShop: U("photo-1556742502-ec7c0e9f34b1"), // small shop owner
+  societyGroup: U("photo-1488521787991-ed7bbaae773c"), // community group
+  trustHandshake: U("photo-1521791136064-7986c2920216"), // trust handshake
+
+  // ── Audit family ──────────────────────────────────────────────────
+  statutoryAudit: U("photo-1554224155-6726b3ff858f"), // audit binders
+  incomeTaxAudit: U("photo-1554224154-22dec7ec8818"), // calculator + forms
+  gstAudit: U("photo-1554224154-26032ffc0d07"), // tax desk
+  internalAudit: U("photo-1573164574572-cb89e39749b4"), // team review
+  revenueAudit: U("photo-1559526324-4b87b5e36e44"), // revenue charts
+  stockAudit: U("photo-1565514020179-026b92b84bb6"), // warehouse inventory
+
+  // ── Return-filing family ─────────────────────────────────────────
+  incomeTaxReturns: U("photo-1591696205602-2f950c417cb9"), // ITR forms (replaced 404)
+  gstReturns: U("photo-1554224155-8d04cb21cd6c"), // calculator + papers
+  tdsReturns: U("photo-1454165804606-c3d57bc86b40"), // financial graphs
+  rocFiling: U("photo-1568992687947-868a62a9f521"), // legal documents
+
+  // ── ESIC / EPF / PT ──────────────────────────────────────────────
+  esicMedical: U("photo-1576091160550-2173dba999ef"), // medical / insurance
+  epfPiggyBank: U("photo-1579621970795-87facc2f976d"), // piggy bank savings
+  ptGovtBuilding: U("photo-1517245386807-bb43f82c33c4"), // government / institutional (replaced 404)
+
+  // ── Registrations ────────────────────────────────────────────────
+  msmeFactory: U("photo-1542838132-92c53300491e"), // small workshop
+  startupIndia: U("photo-1559136555-9303baea8ebd"), // startup founders
+  angelTaxMeeting: U("photo-1573164574230-db1d5e960238"), // investor meeting
+  iecExports: U("photo-1494412574643-ff11b0a5c1c3"), // shipping / containers
+
+  // ── Notices & Advisory ────────────────────────────────────────────
+  itNoticeLetter: U("photo-1543286386-2e659306cd6c"), // tax letter/document (distinct from signing)
+  gstNoticeEmail: U("photo-1596526131083-e8c633c948d2"), // email/notification
+  gstRefundCash: U("photo-1554224155-1696413565d3"), // refund cash
+  projectReport: U("photo-1454165804606-c3d57bc86b40"), // project plan
+
+  // ── Supporting / context images (for intro / extraSections / whyChoose) ──
+  meetingRoom: U("photo-1600880292203-757bb62b4baf"), // bright meeting room
+  team: U("photo-1556761175-5973dc0f32e7"), // diverse team
+  growthChart: U("photo-1551288049-bebda4e38f71"), // analytics laptop
+  signingDocs: U("photo-1450101499163-c8848c66ca85"), // signing
+  legalScale: U("photo-1589829545856-d10d557cf95f"), // scales of justice
+  computerScreen: U("photo-1593642632559-0c6d3fc62b89"), // computer monitor
+  warning: U("photo-1551836022-deb4988cc6c0"), // people looking concerned
+  charityVolunteer: U("photo-1593113598332-cd288d649433"), // charity hands
+  retirementJar: U("photo-1556745757-8d76bdb6984b"), // savings jar
+  community2: U("photo-1582213782179-e0d53f98f2ca"), // diverse community
+  startupCelebration: U("photo-1551836022-d5d88e9218df"), // celebration
+  partnersAlt: U("photo-1507679799987-c73779587ccf"), // partners alt
+  taxFormsClose: U("photo-1517048676732-d65bc937f952"), // tax forms close-up (replaced 404 source)
+  refundReturn: U("photo-1559526324-c1f275fbfa32"), // money return
+  laptopDesk: U("photo-1551288049-bebda4e38f71"), // alias
+  cargoShipping: U("photo-1494412574643-ff11b0a5c1c3"), // alias for IEC
+  taxStrategy: U("photo-1454165804606-c3d57bc86b40"), // alias for planning
+  modernOffice: U("photo-1497366754035-f200968a6e72"), // modern office
+  architecture: U("photo-1486406146926-c627a92ad1ab"), // architecture
+  boardroom: U("photo-1573497019418-b400bb3ab074"), // boardroom discussion
+
+  // ── Backwards-compatibility aliases (each points to a DISTINCT photo) ──
+  business: U("photo-1497366216548-37526070297c"),
+  meeting: U("photo-1600880292203-757bb62b4baf"),
+  growth: U("photo-1559526324-4b87b5e36e44"),
+  signing: U("photo-1450101499163-c8848c66ca85"),
+  audit: U("photo-1554224155-6726b3ff858f"),
+  desk: U("photo-1554224154-22dec7ec8818"),
+  partnership: U("photo-1521737711867-e3b97375f902"),
+  startup: U("photo-1559136555-9303baea8ebd"),
+  // replaced 404 ID with verified working one
+  taxFiling: U("photo-1591696205602-2f950c417cb9"),
+  community: U("photo-1582213782179-e0d53f98f2ca"),
+  factory: U("photo-1565514020179-026b92b84bb6"),
+  exports: U("photo-1494412574643-ff11b0a5c1c3"),
+  // distinct notification image (≠ signing AND ≠ email)
+  notice: U("photo-1517048676732-d65bc937f952"),
+  refund: U("photo-1554224155-1696413565d3"),
+  laptop: U("photo-1551288049-bebda4e38f71"),
+  shop: U("photo-1556742502-ec7c0e9f34b1"),
+  charity: U("photo-1593113598332-cd288d649433"),
+  ledger: U("photo-1568992687947-868a62a9f521"),
+  computer: U("photo-1593642632559-0c6d3fc62b89"),
+  scale: U("photo-1589829545856-d10d557cf95f"),
+  piggyBank: U("photo-1579621970795-87facc2f976d"),
+  insurance: U("photo-1576091160550-2173dba999ef"),
+  investor: U("photo-1573164574230-db1d5e960238"),
+  // replaced 404 ID with verified working alternative
+  govtBuilding: U("photo-1517245386807-bb43f82c33c4"),
+  handshake: U("photo-1521791136064-7986c2920216"),
+  charity2: U("photo-1488521787991-ed7bbaae773c"),
+  retirement: U("photo-1556745757-8d76bdb6984b"),
+  // distinct from ledger
+  documents: U("photo-1454165804606-c3d57bc86b40"),
+  startupInvest: U("photo-1551836022-d5d88e9218df"),
+  email: U("photo-1596526131083-e8c633c948d2"),
+  refundCash: U("photo-1559526324-c1f275fbfa32"),
+  // distinct from handshake
+  trust: U("photo-1593113646773-028c64a8f1b8"),
+  // replaced 404 ID with verified working one
+  payroll: U("photo-1530099486328-e021101a494a"),
 };
 
 export const servicePages: Record<string, ServicePage> = {
@@ -869,7 +906,7 @@ export const servicePages: Record<string, ServicePage> = {
     intro: {
       heading: "Revised MSME Classification",
       body: "The current MSME classification considers both investment and annual turnover to determine eligibility. At AXIAFIN, we provide expert MSME/Udyam registration services in Hyderabad to help businesses secure financial aid, tax rebates, and operational growth.",
-      image: img.factory,
+      image: img.msmeFactory,
     },
     extraSections: [
       {
@@ -965,7 +1002,7 @@ export const servicePages: Record<string, ServicePage> = {
     intro: {
       heading: "Eligibility Criteria for Startup Recognition",
       body: "At AXIAFIN, we provide expert DPIIT recognition services in Hyderabad to help your business unlock government benefits, tax exemptions, and funding opportunities.",
-      image: img.startup,
+      image: img.startupCelebration,
     },
     extraSections: [
       {
@@ -977,12 +1014,12 @@ export const servicePages: Record<string, ServicePage> = {
       {
         heading: "Angel Tax Exemption — Section 56 of the Income Tax Act",
         body: "Angel Tax Exemption, governed by Section 56 of the Income Tax Act, provides relief to startups recognized by the Department for Promotion of Industry and Internal Trade (DPIIT). This exemption shields startups from hefty tax liabilities, particularly concerning the valuation of shares issued to investors. The startup must be officially recognized by the DPIIT to qualify, and the aggregate amount of paid-up share capital and share premium of the startup, after the proposed share issuance, should not exceed INR 25 Crore. Angel Tax Exemption serves as a crucial lifeline for startups seeking investment. It prevents startups from facing punitive tax burdens on the excess valuation of shares issued to angel investors or through seed funding rounds.",
-        image: img.signing,
+        image: img.angelTaxMeeting,
         align: "left",
       },
     ],
     advantagesHeading: "Eligibility Criteria for Startup Recognition",
-    advantagesImage: img.signing,
+    advantagesImage: img.boardroom,
     advantages: [
       {
         icon: Rocket,
@@ -1121,7 +1158,7 @@ export const servicePages: Record<string, ServicePage> = {
     intro: {
       heading: "Pre-Requisites for Applying for IEC",
       body: "The IEC serves as a unique identifier for businesses participating in international trade transactions. IEC registration is a fundamental requirement for businesses involved in international trade operations. By obtaining an IEC, businesses gain access to various benefits and opportunities in the global marketplace, facilitating smoother import and export processes. At AXIAFIN, we provide expert IEC registration services in Hyderabad.",
-      image: img.exports,
+      image: img.architecture,
     },
     advantagesHeading: "Pre-Requisites for Applying for IEC",
     advantagesImage: img.signing,
@@ -1480,7 +1517,7 @@ export const servicePages: Record<string, ServicePage> = {
       {
         heading: "Recognised Provident Fund",
         body: "The Provident Fund Act, 1952 applies to all establishments employing 20 or more employees. The establishments covered under the scheme can either apply for the government-approved scheme or start a PF scheme by forming their trust. The establishments can join the government-approved scheme set up under the PF Act 1952, which is a recognised provident fund. Alternatively, the establishment's employer and employee can create a provident fund scheme by forming a trust, and funds are invested as per rules prescribed under the PF Act, 1952. The commissioner of income tax must approve the scheme to receive the status of the recognised provident fund.",
-        image: img.signing,
+        image: img.modernOffice,
         align: "left",
       },
       {
@@ -1673,12 +1710,12 @@ export const servicePages: Record<string, ServicePage> = {
       titleAccent: "Notices",
       description:
         "Let's know importance of considering income tax notice and replying properly. Receiving a notice from the income tax department can be concerning, but it's essential to understand the nature of the notice and take appropriate action.",
-      image: img.notice,
+      image: img.itNoticeLetter,
     },
     intro: {
       heading: "Understanding Notices — Intimation vs Notice",
       body: "An intimation signifies the result of processing your return or assessment, often not requiring immediate action. A notice, however, demands your attention and response. Notices can be issued for various reasons, including filing errors, income discrepancies, underreporting, non-payment of taxes, TDS discrepancies, and high-value financial transactions.",
-      image: img.notice,
+      image: img.email,
     },
     extraSections: [
       {
@@ -1961,7 +1998,7 @@ export const servicePages: Record<string, ServicePage> = {
       {
         heading: "Financial Analysis and Projections",
         body: "Project financial statements include Balance sheet, Profit & loss account. Financial Projections cover quantitative projections on Income, expenses, sources of funds & application of funds. Ratio analysis involves computation & analysis of financial statements through key ratios & their implications. Funds flow Statement details where funds are sourced and the application of funds. Breakeven analysis examines the breakeven point of the project, its feasibility in terms of cost & benefits.",
-        image: img.growth,
+        image: img.taxStrategy,
         align: "right",
       },
       {
@@ -2108,7 +2145,7 @@ export const servicePages: Record<string, ServicePage> = {
       titleAccent: "Services in Hyderabad",
       description:
         "Comprehensive Income Tax Audits for Businesses and Professionals. There are many types of audits conducted under various laws.",
-      image: img.desk,
+      image: img.incomeTaxAudit,
     },
     intro: {
       heading: "What is an Income Tax Audit?",
@@ -2119,7 +2156,7 @@ export const servicePages: Record<string, ServicePage> = {
       {
         heading: "When is a Tax Audit Mandatory?",
         body: "As per Section 44AB, a taxpayer must undergo a tax audit if the turnover, sales, or gross receipts exceed ₹1 crore during the financial year. However, there are specific circumstances under which a tax audit becomes mandatory. Our income tax auditors in Hyderabad ensure that your audit is conducted as per Finance Act updates and CBDT guidelines.",
-        image: img.desk,
+        image: img.taxFormsClose,
         align: "right",
         bullets: [
           "For businesses with turnover exceeding ₹1 crore (₹10 crore if cash transactions ≤ 5%).",
@@ -2140,7 +2177,7 @@ export const servicePages: Record<string, ServicePage> = {
       {
         heading: "About the Audit Report — Forms 3CA, 3CB and 3CD",
         body: "Tax auditor furnishes the report in either Form 3CA or Form 3CB. Form 3CA is used when a person is already mandated to get accounts audited under any other law. Form 3CB is used when a person is not required to get accounts audited under any other law. Tax auditor must furnish prescribed particulars in Form 3CD, which forms part of the audit report.",
-        image: img.signing,
+        image: img.documents,
         align: "right",
       },
     ],
@@ -2209,7 +2246,7 @@ export const servicePages: Record<string, ServicePage> = {
       titleAccent: "Services in Hyderabad",
       description:
         "A Comprehensive Guide to Compliance and Assurance. GSTR-9C is an essential form for annual GST reconciliation filed by applicable taxpayers.",
-      image: img.notice,
+      image: img.gstAudit,
     },
     intro: {
       heading: "What is a GST Audit?",
@@ -2220,7 +2257,7 @@ export const servicePages: Record<string, ServicePage> = {
       {
         heading: "What is GSTR-9C? — Definition & Purpose",
         body: "GSTR-9C is a reconciliation statement that compares the figures reported in the annual GST return (GSTR-9) with the audited financial statements of a taxpayer. It highlights any differences between the two and ensures that all GST transactions are properly accounted for.",
-        image: img.signing,
+        image: img.taxFormsClose,
         align: "right",
         bullets: [
           "Reconciles gross and taxable turnover as per books with GST returns.",
@@ -2305,7 +2342,7 @@ export const servicePages: Record<string, ServicePage> = {
       titleAccent: "Services in Hyderabad",
       description:
         "Safeguarding Organizational Integrity & Compliance. Internal audit refers to an independent service to evaluate an organization's internal controls, its corporate practices, processes, and methods.",
-      image: img.meeting,
+      image: img.internalAudit,
     },
     intro: {
       heading: "What is Internal Audit?",
@@ -2316,7 +2353,7 @@ export const servicePages: Record<string, ServicePage> = {
       {
         heading: "Purpose and Scope of Internal Audit",
         body: "The purpose of an internal audit is to assess the effectiveness of operational standards and evaluate adherence to company policies. It ensures that all business processes — from order placement to delivery and payment — comply with legal and procedural norms.",
-        image: img.signing,
+        image: img.boardroom,
         align: "right",
         bullets: [
           "Evaluates financial and operational control systems",
@@ -2475,12 +2512,12 @@ export const servicePages: Record<string, ServicePage> = {
       titleAccent: "Services in Hyderabad",
       description:
         "Enhancing Inventory Management and Financial Accuracy. A stock audit, also known as an inventory audit, is a critical process that ensures the accuracy of physical goods in a store's warehouse matches the information recorded in the stock register.",
-      image: img.factory,
+      image: img.stockAudit,
     },
     intro: {
       heading: "What is a Stock Audit?",
       body: "A Stock Audit, also known as an Inventory Audit, is a critical financial review process that ensures the accuracy of your company's physical inventory records. It verifies whether the goods available in your warehouse or store match the quantities listed in your stock register. Whether conducted internally or by external stock audit firms, this process is vital for maintaining transparency, compliance, and efficient inventory management.",
-      image: img.factory,
+      image: img.msmeFactory,
     },
     extraSections: [
       {
@@ -2498,7 +2535,7 @@ export const servicePages: Record<string, ServicePage> = {
       {
         heading: "Why Stock Audit is Crucial for Businesses",
         body: "Companies dealing with physical goods — from manufacturing to eCommerce — rely on stock audit services to ensure real-time accuracy of their inventory and to prevent stock mismanagement. The audit process can vary depending on your business type. Our experts tailor inventory audit procedures for retailers, manufacturers, and warehouses to meet industry-specific standards.",
-        image: img.factory,
+        image: img.cargoShipping,
         align: "left",
       },
     ],

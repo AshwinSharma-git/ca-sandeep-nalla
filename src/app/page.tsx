@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { BusinessVsCompliance } from "@/components/sections/BusinessVsCompliance";
 import { AboutSummary } from "@/components/sections/AboutSummary";
 import { Industries } from "@/components/sections/Industries";
 import { FeaturedServices } from "@/components/sections/FeaturedServices";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Hero />
       <TrustStrip />
       <WhyChooseUs />
+      <BusinessVsCompliance />
       <AboutSummary />
       <FeaturedServices />
       <Industries />

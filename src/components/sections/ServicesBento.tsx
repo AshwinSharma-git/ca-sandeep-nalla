@@ -88,7 +88,7 @@ export function ServicesBento() {
             <article className="glass-card p-10 md:p-12 rounded-3xl border border-white flex flex-col md:flex-row items-center gap-10 shadow-xl h-full">
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0 border-4 border-white shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1521791136364-798a730bb361?auto=format&fit=crop&q=80&w=1740"
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1740"
                   alt="Partner in client consultation"
                   fill
                   sizes="(min-width: 768px) 192px, 160px"

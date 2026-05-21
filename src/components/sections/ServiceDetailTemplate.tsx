@@ -22,15 +22,17 @@ function ImageBlock({
   src,
   alt,
   className,
+  priority,
 }: {
   src: string;
   alt: string;
   className?: string;
+  priority?: boolean;
 }) {
   return (
     <div
       className={cn(
-        "relative aspect-[4/3] rounded-3xl overflow-hidden luxury-shadow border border-lime/10",
+        "relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden luxury-shadow border border-lime/10",
         className,
       )}
     >
@@ -38,7 +40,8 @@ function ImageBlock({
         src={src}
         alt={alt}
         fill
-        sizes="(min-width: 1024px) 45vw, 90vw"
+        priority={priority}
+        sizes="(min-width: 1280px) 600px, (min-width: 1024px) 45vw, (min-width: 640px) 80vw, 100vw"
         className="object-cover"
       />
       <div
@@ -253,7 +256,7 @@ export function ServiceDetailTemplate({ data }: Props) {
             </FadeIn>
             {data.hero.image && (
               <FadeIn direction="left" delay={0.15} className="lg:col-span-5">
-                <ImageBlock src={data.hero.image} alt={data.title} />
+                <ImageBlock src={data.hero.image} alt={data.title} priority />
               </FadeIn>
             )}
           </div>
