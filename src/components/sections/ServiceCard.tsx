@@ -10,23 +10,23 @@ type Props = {
 
 export function ServiceCard({ title, desc, icon: Icon, href }: Props) {
   return (
-    <article className="group bg-white p-8 md:p-10 rounded-2xl border border-gold/10 shadow-lg flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full">
+    <article className="group bg-white p-8 md:p-10 rounded-2xl border border-lime/10 shadow-lg flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full">
       <div>
-        <div className="w-16 h-16 rounded-2xl bg-navy flex items-center justify-center text-gold-light mb-8 group-hover:scale-110 transition-transform shadow-lg">
+        <div className="w-16 h-16 rounded-2xl bg-ink flex items-center justify-center text-lime-soft mb-8 group-hover:scale-110 transition-transform shadow-lg">
           <Icon className="w-8 h-8" aria-hidden="true" />
         </div>
         <div
           aria-hidden="true"
-          className="w-12 h-1 bg-gold/30 mb-6 group-hover:w-20 transition-all"
+          className="w-12 h-1 bg-lime/30 mb-6 group-hover:w-20 transition-all"
         />
-        <h3 className="font-display text-2xl text-navy font-bold mb-4">
+        <h3 className="font-display text-2xl text-ink font-bold mb-4">
           {title}
         </h3>
         <p className="text-gray-500 text-sm leading-relaxed mb-8">{desc}</p>
       </div>
       <Link
         href={href}
-        className="flex items-center gap-2 text-navy font-bold text-xs uppercase tracking-widest hover:text-gold transition-colors"
+        className="flex items-center gap-2 text-ink font-bold text-xs uppercase tracking-widest hover:text-lime transition-colors"
         aria-label={`Inquire about ${title}`}
       >
         Inquire Details

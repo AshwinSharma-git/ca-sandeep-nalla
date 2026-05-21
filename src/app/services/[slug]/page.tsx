@@ -51,7 +51,7 @@ export default async function ServiceDetailPage({
     description: data.metaDescription,
     provider: {
       "@type": "AccountingService",
-      name: "CA Sandeep Nalla & Co.",
+      name: "AXIAFIN",
     },
     areaServed: { "@type": "Country", name: "India" },
   };

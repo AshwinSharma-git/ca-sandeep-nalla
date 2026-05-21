@@ -49,15 +49,17 @@ export function Navbar() {
 
   const scheduleClose = () => {
     cancelClose();
-    closeTimer.current = window.setTimeout(() => setOpenMega(null), 120);
+    closeTimer.current = window.setTimeout(() => setOpenMega(null), 140);
   };
+
+  const isElevated = scrolled || isOpen || !!openMega;
 
   return (
     <header
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-        scrolled || isOpen || openMega
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gold/20"
+        isElevated
+          ? "bg-white/85 backdrop-blur-xl shadow-[0_8px_30px_-12px_rgba(14,16,36,0.12)] border-b border-ink/[0.06]"
           : "bg-transparent",
       )}
     >
@@ -67,34 +69,46 @@ export function Navbar() {
       >
         <Logo />
 
-        <ul className="hidden lg:flex items-center gap-2">
+        <ul className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => {
             const hasMega = !!link.groups?.length;
+            const active = isActive(link.href);
             return (
               <li
                 key={link.name}
                 className="relative"
-                onMouseEnter={() => hasMega && (cancelClose(), setOpenMega(link.name))}
+                onMouseEnter={() =>
+                  hasMega && (cancelClose(), setOpenMega(link.name))
+                }
                 onMouseLeave={() => hasMega && scheduleClose()}
               >
                 <Link
                   href={link.href}
-                  aria-current={isActive(link.href) ? "page" : undefined}
+                  aria-current={active ? "page" : undefined}
                   aria-expanded={hasMega ? openMega === link.name : undefined}
                   aria-haspopup={hasMega ? "menu" : undefined}
                   onFocus={() => hasMega && setOpenMega(link.name)}
                   className={cn(
-                    "px-4 py-2 rounded-md text-sm font-medium transition-colors hover:text-gold flex items-center gap-1.5",
-                    isActive(link.href) ? "text-gold" : "text-navy",
+                    "relative px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5",
+                    active
+                      ? "text-indigo"
+                      : "text-ink hover:text-indigo",
                   )}
                 >
                   {link.name}
                   {hasMega && (
                     <ChevronDown
                       className={cn(
-                        "w-4 h-4 transition-transform duration-200",
+                        "w-3.5 h-3.5 transition-transform duration-200",
                         openMega === link.name && "rotate-180",
                       )}
+                      aria-hidden="true"
+                    />
+                  )}
+                  {active && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute -bottom-1 left-4 right-4 h-[2px] rounded-full brand-gradient"
                       aria-hidden="true"
                     />
                   )}
@@ -107,23 +121,26 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href={`tel:${siteConfig.contact.phoneE164}`}
-            className="hidden xl:flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors"
+            className="hidden xl:flex items-center gap-2 text-sm font-medium text-ink hover:text-indigo transition-colors"
           >
-            <PhoneCall className="w-4 h-4 text-gold" aria-hidden="true" />
+            <PhoneCall className="w-4 h-4 text-indigo" aria-hidden="true" />
             {siteConfig.contact.phone}
           </a>
           <Link
             href="/contact"
-            className="px-5 py-2.5 text-sm font-semibold bg-navy text-white rounded-md hover:bg-navy-light transition-all shadow-md inline-flex items-center gap-2"
+            className="group px-5 py-2.5 text-sm font-semibold bg-indigo text-white rounded-xl hover:bg-indigo-deep transition-all shadow-[0_8px_24px_-10px_rgba(61,67,201,0.55)] hover:shadow-[0_12px_30px_-10px_rgba(61,67,201,0.6)] hover:-translate-y-0.5 inline-flex items-center gap-2"
           >
             Free Consultation
-            <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+            <ArrowUpRight
+              className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              aria-hidden="true"
+            />
           </Link>
         </div>
 
         <button
           type="button"
-          className="lg:hidden text-navy p-2 -mr-2"
+          className="lg:hidden text-ink p-2 -mr-2"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
@@ -141,15 +158,16 @@ export function Navbar() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: reduce ? 0 : 0.18, ease: "easeOut" }}
-            className="hidden lg:block absolute left-0 right-0 top-20 border-t border-gold/10"
+            transition={{ duration: reduce ? 0 : 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden lg:block absolute left-0 right-0 top-20 border-t border-ink/[0.06]"
             onMouseEnter={cancelClose}
             onMouseLeave={scheduleClose}
           >
-            <div className="bg-white shadow-2xl">
+            <div className="bg-white/95 backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(14,16,36,0.2)]">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
                 <MegaMenuContent name={openMega} />
               </div>
+              <div className="hairline" aria-hidden="true" />
             </div>
           </motion.div>
         )}
@@ -164,7 +182,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: reduce ? 0 : 0.25, ease: "easeOut" }}
-            className="lg:hidden bg-white border-b border-gold/20 overflow-hidden"
+            className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-ink/[0.06] overflow-hidden"
           >
             <div className="px-4 pt-2 pb-6 space-y-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
               {navLinks.map((link) => (
@@ -173,13 +191,17 @@ export function Navbar() {
               <div className="pt-4 space-y-3">
                 <a
                   href={`tel:${siteConfig.contact.phoneE164}`}
-                  className="block w-full py-3 text-sm font-semibold text-navy border border-gold/30 text-center rounded-md"
+                  className="flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold text-ink border border-ink/15 rounded-xl"
                 >
-                  Call {siteConfig.contact.phone}
+                  <PhoneCall
+                    className="w-4 h-4 text-indigo"
+                    aria-hidden="true"
+                  />
+                  {siteConfig.contact.phone}
                 </a>
                 <Link
                   href="/contact"
-                  className="block w-full py-3 text-sm font-semibold bg-navy text-white text-center rounded-md"
+                  className="block w-full py-3 text-sm font-semibold bg-indigo text-white text-center rounded-xl shadow-[0_8px_24px_-10px_rgba(61,67,201,0.55)]"
                 >
                   Free Consultation
                 </Link>
@@ -196,10 +218,13 @@ function MegaMenuContent({ name }: { name: string }) {
   const link = navLinks.find((l) => l.name === name);
   if (!link?.groups) return null;
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-10" role="menu">
+    <div
+      className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-10"
+      role="menu"
+    >
       {link.groups.map((group) => (
         <div key={group.heading}>
-          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold mb-4">
+          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-indigo mb-4">
             {group.heading}
           </p>
           <ul className="space-y-2.5">
@@ -208,9 +233,9 @@ function MegaMenuContent({ name }: { name: string }) {
                 <Link
                   href={item.href}
                   role="menuitem"
-                  className="block text-sm text-navy hover:text-gold transition-colors leading-snug"
+                  className="group flex items-start text-sm text-ink hover:text-indigo transition-colors leading-snug"
                 >
-                  {item.name}
+                  <span className="link-underline">{item.name}</span>
                 </Link>
               </li>
             ))}
@@ -221,21 +246,17 @@ function MegaMenuContent({ name }: { name: string }) {
   );
 }
 
-function MobileNavItem({
-  link,
-}: {
-  link: (typeof navLinks)[number];
-}) {
+function MobileNavItem({ link }: { link: (typeof navLinks)[number] }) {
   const [expanded, setExpanded] = useState(false);
   const reduce = useReducedMotion();
   const hasGroups = !!link.groups?.length;
 
   return (
-    <div>
+    <div className="border-b border-ink/[0.04] last:border-b-0">
       <div className="flex items-center">
         <Link
           href={link.href}
-          className="flex-1 block px-3 py-3.5 text-base font-medium text-navy active:text-gold"
+          className="flex-1 block px-3 py-3.5 text-base font-medium text-ink"
         >
           {link.name}
         </Link>
@@ -245,7 +266,7 @@ function MobileNavItem({
             aria-label={expanded ? `Collapse ${link.name}` : `Expand ${link.name}`}
             aria-expanded={expanded}
             onClick={() => setExpanded((v) => !v)}
-            className="p-3 text-navy/60"
+            className="p-3 text-ink/60"
           >
             <ChevronDown
               className={cn(
@@ -266,10 +287,10 @@ function MobileNavItem({
             transition={{ duration: reduce ? 0 : 0.2 }}
             className="overflow-hidden"
           >
-            <div className="pl-4 pb-2 space-y-4">
+            <div className="pl-4 pb-3 space-y-4">
               {link.groups!.map((group) => (
                 <div key={group.heading}>
-                  <p className="px-3 pt-3 pb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-gold">
+                  <p className="px-3 pt-3 pb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-indigo">
                     {group.heading}
                   </p>
                   <ul className="space-y-0.5">
@@ -277,7 +298,7 @@ function MobileNavItem({
                       <li key={item.href}>
                         <Link
                           href={item.href}
-                          className="block px-3 py-2 text-sm text-navy/80"
+                          className="block px-3 py-2 text-sm text-ink/80"
                         >
                           {item.name}
                         </Link>

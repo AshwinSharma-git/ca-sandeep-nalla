@@ -9,7 +9,7 @@ const tags = ["M&A", "Auditing", "Tax Law", "Regulatory"];
 
 export function ServicesBento() {
   return (
-    <section className="py-24 bg-ivory">
+    <section className="py-24 bg-pearl">
       <Container>
         <FadeIn className="mb-16">
           <SectionHeading
@@ -23,18 +23,18 @@ export function ServicesBento() {
           <HoverLift className="md:col-span-2">
             <article className="glass-card p-10 md:p-12 rounded-3xl border border-white shadow-xl flex flex-col justify-between min-h-[350px] h-full">
               <div className="flex justify-between items-start gap-4">
-                <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-lime/10 rounded-2xl flex items-center justify-center">
                   <TrendingUp
-                    className="w-8 h-8 text-gold"
+                    className="w-8 h-8 text-lime"
                     aria-hidden="true"
                   />
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-gold/5 px-4 py-2 rounded-full border border-gold/20">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-lime bg-lime/5 px-4 py-2 rounded-full border border-lime/20">
                   Premium Service
                 </span>
               </div>
               <div className="max-w-md mt-12">
-                <h3 className="font-display text-2xl text-navy font-bold mb-4">
+                <h3 className="font-display text-2xl text-ink font-bold mb-4">
                   Maximum Tax Savings
                 </h3>
                 <p className="text-gray-600">
@@ -47,16 +47,16 @@ export function ServicesBento() {
           </HoverLift>
 
           <HoverLift>
-            <article className="bg-navy p-10 md:p-12 rounded-3xl flex flex-col justify-between min-h-[350px] shadow-2xl relative overflow-hidden h-full">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full -mr-16 -mt-16 blur-3xl" />
+            <article className="bg-ink p-10 md:p-12 rounded-3xl flex flex-col justify-between min-h-[350px] shadow-2xl relative overflow-hidden h-full">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-lime/10 rounded-full -mr-16 -mt-16 blur-3xl" />
               <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10">
                 <ShieldCheck
-                  className="w-8 h-8 text-gold-light"
+                  className="w-8 h-8 text-lime-soft"
                   aria-hidden="true"
                 />
               </div>
               <div className="mt-12">
-                <h3 className="font-display text-2xl text-gold-light font-bold mb-4">
+                <h3 className="font-display text-2xl text-lime-soft font-bold mb-4">
                   Accurate Compliance
                 </h3>
                 <p className="text-gray-400">
@@ -68,12 +68,12 @@ export function ServicesBento() {
           </HoverLift>
 
           <HoverLift>
-            <article className="bg-white p-10 md:p-12 rounded-3xl border border-gold/10 flex flex-col justify-between min-h-[350px] shadow-sm h-full">
-              <div className="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center">
-                <Users className="w-8 h-8 text-navy" aria-hidden="true" />
+            <article className="bg-white p-10 md:p-12 rounded-3xl border border-lime/10 flex flex-col justify-between min-h-[350px] shadow-sm h-full">
+              <div className="w-16 h-16 bg-ink/5 rounded-2xl flex items-center justify-center">
+                <Users className="w-8 h-8 text-ink" aria-hidden="true" />
               </div>
               <div className="mt-12">
-                <h3 className="font-display text-2xl text-navy font-bold mb-4">
+                <h3 className="font-display text-2xl text-ink font-bold mb-4">
                   Fast Processing
                 </h3>
                 <p className="text-gray-600">
@@ -96,7 +96,7 @@ export function ServicesBento() {
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h3 className="font-display text-2xl text-navy font-bold mb-4">
+                <h3 className="font-display text-2xl text-ink font-bold mb-4">
                   Expert CA Guidance
                 </h3>
                 <p className="text-gray-600 mb-6">
@@ -107,7 +107,7 @@ export function ServicesBento() {
                   {tags.map((tag) => (
                     <li
                       key={tag}
-                      className="px-4 py-1 bg-gold/10 text-gold text-[10px] font-bold uppercase rounded-full border border-gold/20 leading-loose"
+                      className="px-4 py-1 bg-lime/10 text-lime text-[10px] font-bold uppercase rounded-full border border-lime/20 leading-loose"
                     >
                       {tag}
                     </li>

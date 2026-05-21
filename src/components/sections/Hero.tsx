@@ -1,66 +1,72 @@
 import Image from "next/image";
-import {
-  ArrowRight,
-  ShieldCheck,
-  TrendingUp,
-  CheckCircle2,
-} from "lucide-react";
+import { ArrowRight, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { LinkButton } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const heroPoints = [
-  "Senior CA-led engagements",
-  "Fixed fee, no surprise billing",
-  "Mon – Fri · 9 AM – 6 PM IST",
+  "Senior-CA led engagements",
+  "Fixed fee · no surprise billing",
+  "48-hour GST registrations",
 ];
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] flex items-center bg-off-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2070"
-          alt=""
-          aria-hidden="true"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-10 grayscale"
-        />
-        <div className="absolute inset-0 bg-gradient-to-tr from-off-white via-off-white/80 to-transparent" />
-      </div>
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-mist">
+      {/* Brand ambient glow */}
+      <div
+        aria-hidden="true"
+        className="absolute -top-40 -left-40 w-[36rem] h-[36rem] rounded-full bg-indigo/15 blur-[140px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-40 -right-40 w-[40rem] h-[40rem] rounded-full bg-lime/15 blur-[160px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(14,16,36,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(14,16,36,0.6) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+          maskImage:
+            "radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, transparent 70%)",
+        }}
+      />
 
       <Container className="relative z-10 py-28 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <FadeIn direction="right" className="space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/5">
-            <ShieldCheck className="w-4 h-4 text-gold" aria-hidden="true" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gold">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo/20 bg-white/70 backdrop-blur shadow-sm">
+            <Sparkles className="w-4 h-4 text-indigo" aria-hidden="true" />
+            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-ink">
               Chartered Accountants · Hyderabad
             </span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-navy leading-[1.05] font-bold text-balance">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-ink leading-[1.02] font-bold text-balance">
             Empowering Your{" "}
-            <span className="text-gold italic font-medium">
+            <span className="text-gradient-brand italic font-medium">
               Financial Compliance
             </span>
           </h1>
 
-          <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
-            Company registration, GST, audit, ITR filing, and end-to-end
-            compliance — delivered by senior Chartered Accountants who give
-            best value to your time and money.
-          </p>
+          <div className="space-y-3">
+            <p className="text-lg text-slate max-w-xl leading-relaxed">
+              Welcome to AXIAFIN
+            </p>
+            <p className="text-base text-slate/80 max-w-xl leading-relaxed">
+              Mission: Providing Best value to your time and money.
+            </p>
+          </div>
 
-          <ul className="space-y-2.5 pt-2">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 pt-1">
             {heroPoints.map((point) => (
               <li
                 key={point}
-                className="flex items-center gap-3 text-sm text-navy font-medium"
+                className="flex items-center gap-3 text-sm text-ink font-medium"
               >
                 <CheckCircle2
-                  className="w-5 h-5 text-gold shrink-0"
+                  className="w-5 h-5 text-lime shrink-0"
                   aria-hidden="true"
                 />
                 {point}
@@ -68,9 +74,9 @@ export function Hero() {
             ))}
           </ul>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
-            <LinkButton href="/contact" size="lg" className="group">
-              Book Free Consultation
+          <div className="flex flex-col sm:flex-row gap-4 pt-3">
+            <LinkButton href="/contact" size="lg">
+              Get started now
               <ArrowRight
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                 aria-hidden="true"
@@ -87,31 +93,56 @@ export function Hero() {
           delay={0.15}
           className="hidden md:block relative"
         >
-          <div className="absolute -top-12 -left-12 w-64 h-64 bg-gold/10 rounded-full blur-3xl opacity-50" />
-          <div className="relative glass-card rounded-3xl p-6 luxury-shadow border border-white/50">
-            <div className="relative rounded-2xl overflow-hidden mb-8 shadow-inner aspect-[3/4]">
+          {/* Floating decorative card behind */}
+          <div
+            aria-hidden="true"
+            className="absolute -top-8 -right-6 w-40 h-40 rounded-3xl indigo-gradient rotate-6 shadow-[0_30px_60px_-20px_rgba(61,67,201,0.5)]"
+          />
+          <div className="relative glass-card rounded-3xl p-6 luxury-shadow">
+            <div className="relative rounded-2xl overflow-hidden mb-6 aspect-[3/4]">
               <Image
                 src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1740"
-                alt="Senior chartered accountants reviewing financial reports"
+                alt="AXIAFIN Chartered Accountants reviewing financial reports"
                 fill
-                sizes="(min-width: 768px) 40vw, 0vw"
+                priority
+                sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
               />
+              <div className="absolute inset-x-3 bottom-3 rounded-xl bg-white/85 backdrop-blur-md px-4 py-3 flex items-center gap-3 border border-white/60 shadow-sm">
+                <div className="w-9 h-9 rounded-lg bg-indigo/10 flex items-center justify-center">
+                  <ShieldCheck
+                    className="w-5 h-5 text-indigo"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="flex-1">
+                  <p className="text-[9px] uppercase tracking-[0.18em] font-bold text-slate/70">
+                    Committed to security
+                  </p>
+                  <p className="text-sm font-bold text-ink leading-tight">
+                    Your data is our top priority
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="flex justify-between items-end px-2">
+
+            <div className="flex items-center justify-between px-1">
               <div>
-                <p className="text-[11px] uppercase tracking-widest text-gray-400 font-bold mb-1">
-                  Best Value · Your Time
+                <p className="text-[10px] uppercase tracking-[0.2em] text-slate/70 font-bold mb-1">
+                  Data Security
                 </p>
-                <p className="font-display text-2xl text-navy font-bold">
-                  Strategic Stewardship
+                <p className="font-display text-xl text-ink font-bold leading-tight">
+                  Your data is <br />
+                  our top priority
                 </p>
               </div>
-              <div className="p-4 bg-gold-light rounded-2xl shadow-lg">
-                <TrendingUp
-                  className="w-8 h-8 text-navy"
-                  aria-hidden="true"
-                />
+              <div className="text-right">
+                <p className="font-display text-4xl text-gradient-brand font-bold leading-none">
+                  99.8<span className="text-2xl">%</span>
+                </p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-slate/70 font-bold mt-1">
+                  On-time
+                </p>
               </div>
             </div>
           </div>

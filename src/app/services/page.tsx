@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Stagger, StaggerItem } from "@/components/ui/Stagger";
-import { GoldDivider } from "@/components/ui/GoldDivider";
+import { BrandDivider } from "@/components/ui/BrandDivider";
 import { services, categoryLabel } from "@/lib/services-data";
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function ServicesPage() {
         title={
           <>
             Comprehensive Financial{" "}
-            <span className="text-gold italic font-medium">Expertise</span>
+            <span className="text-lime italic font-medium">Expertise</span>
           </>
         }
         description="From your first incorporation to your hundredth ROC filing — every compliance, registration, and advisory need under one roof, owned by senior Chartered Accountants."
@@ -54,8 +54,8 @@ export default function ServicesPage() {
               <Container>
                 <FadeIn className="flex items-end justify-between gap-6 mb-10">
                   <div className="space-y-4">
-                    <GoldDivider />
-                    <h2 className="font-display text-3xl md:text-4xl text-navy font-bold">
+                    <BrandDivider />
+                    <h2 className="font-display text-3xl md:text-4xl text-ink font-bold">
                       {categoryLabel[cat]}
                     </h2>
                   </div>
@@ -82,7 +82,7 @@ export default function ServicesPage() {
         title={
           <>
             Not Sure Where to{" "}
-            <span className="text-gold italic font-medium">Start</span>?
+            <span className="text-lime italic font-medium">Start</span>?
           </>
         }
         description="Book a free 30-minute consultation with a senior partner — we'll map exactly what your business needs next."

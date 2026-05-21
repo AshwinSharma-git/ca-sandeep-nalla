@@ -35,7 +35,7 @@ export function FAQ({
   };
 
   return (
-    <section className="py-24 md:py-32 bg-off-white">
+    <section className="py-24 md:py-32 bg-mist">
       <Container className="max-w-4xl">
         <FadeIn className="mb-12 md:mb-16">
           <SectionHeading
@@ -52,7 +52,7 @@ export function FAQ({
             return (
               <li
                 key={item.q}
-                className="bg-white rounded-2xl border border-gold/10 shadow-sm overflow-hidden"
+                className="bg-white rounded-2xl border border-lime/10 shadow-sm overflow-hidden"
               >
                 <button
                   type="button"
@@ -60,11 +60,11 @@ export function FAQ({
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full text-left px-6 sm:px-8 py-5 flex items-center justify-between gap-6 group"
                 >
-                  <span className="font-display text-lg text-navy font-bold leading-snug">
+                  <span className="font-display text-lg text-ink font-bold leading-snug">
                     {item.q}
                   </span>
                   <span
-                    className="shrink-0 w-9 h-9 rounded-full bg-ivory border border-gold/20 flex items-center justify-center text-navy group-hover:bg-gold group-hover:text-white transition-colors"
+                    className="shrink-0 w-9 h-9 rounded-full bg-pearl border border-lime/20 flex items-center justify-center text-ink group-hover:bg-lime group-hover:text-white transition-colors"
                     aria-hidden="true"
                   >
                     {isOpen ? (

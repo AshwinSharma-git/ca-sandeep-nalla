@@ -56,7 +56,7 @@ export function ContactForm() {
           id="service"
           name="service"
           required
-          className="w-full bg-ivory border-0 rounded-xl p-4 focus:ring-2 focus:ring-gold/30 outline-none transition-all appearance-none"
+          className="w-full bg-pearl border-0 rounded-xl p-4 focus:ring-2 focus:ring-lime/30 outline-none transition-all appearance-none"
         >
           {serviceOptions.map((opt) => (
             <option key={opt} value={opt}>
@@ -78,7 +78,7 @@ export function ContactForm() {
           name="message"
           rows={5}
           required
-          className="w-full bg-ivory border-0 rounded-xl p-4 focus:ring-2 focus:ring-gold/30 outline-none transition-all resize-none"
+          className="w-full bg-pearl border-0 rounded-xl p-4 focus:ring-2 focus:ring-lime/30 outline-none transition-all resize-none"
           placeholder="How can our firm assist your enterprise today?"
         />
       </div>
@@ -87,7 +87,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="group px-10 py-5 bg-navy text-white rounded-2xl font-bold uppercase tracking-[0.2em] text-xs flex items-center justify-center gap-3 hover:bg-navy-light transition-all shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
+          className="group px-10 py-5 bg-ink text-white rounded-2xl font-bold uppercase tracking-[0.2em] text-xs flex items-center justify-center gap-3 hover:bg-ink-light transition-all shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {status === "submitting" ? "Sending…" : "Submit Inquiry"}
           <Send
@@ -99,10 +99,10 @@ export function ContactForm() {
         {status === "success" && (
           <p
             role="status"
-            className="inline-flex items-center gap-2 text-sm text-navy font-medium"
+            className="inline-flex items-center gap-2 text-sm text-ink font-medium"
           >
             <CheckCircle2
-              className="w-5 h-5 text-gold"
+              className="w-5 h-5 text-lime"
               aria-hidden="true"
             />
             Thank you — our team will respond within one business day.
@@ -140,7 +140,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full bg-ivory border-0 rounded-xl p-4 focus:ring-2 focus:ring-gold/30 outline-none transition-all"
+        className="w-full bg-pearl border-0 rounded-xl p-4 focus:ring-2 focus:ring-lime/30 outline-none transition-all"
       />
     </div>
   );

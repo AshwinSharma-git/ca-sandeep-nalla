@@ -10,6 +10,7 @@ import {
   Clock,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/layout/Logo";
 import { siteConfig, offices } from "@/lib/site-config";
 
 const startBusinessLinks = [
@@ -53,13 +54,14 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy pt-20 pb-10 text-white">
+    <footer className="bg-ink pt-20 pb-10 text-white">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           <div className="lg:col-span-4 space-y-6">
-            <h3 className="font-display text-2xl font-bold text-gold-light">
-              CA Sandeep Nalla <span className="text-white">&</span> Co.
-            </h3>
+            <Logo variant="light" />
+            <p className="text-xs uppercase tracking-[0.3em] text-lime-soft/80 font-bold">
+              {siteConfig.tagline}
+            </p>
             <p className="text-gray-400 text-sm leading-relaxed">
               {siteConfig.tagline}. A Chartered Accountancy firm built around
               precision, speed, and complete financial stewardship — for
@@ -73,7 +75,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold/20 transition-all text-gold-light"
+                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-lime/20 transition-all text-lime-soft"
                   >
                     <Icon className="w-4 h-4" aria-hidden="true" />
                   </a>
@@ -83,7 +85,7 @@ export function Footer() {
           </div>
 
           <nav aria-label="Start a Business" className="lg:col-span-2">
-            <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-gold-light mb-6">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-lime-soft mb-6">
               Start a Business
             </h4>
             <ul className="space-y-3 text-sm text-gray-400">
@@ -91,7 +93,7 @@ export function Footer() {
                 <li key={l.name}>
                   <Link
                     href={l.href}
-                    className="hover:text-gold transition-colors"
+                    className="hover:text-lime transition-colors"
                   >
                     {l.name}
                   </Link>
@@ -101,7 +103,7 @@ export function Footer() {
           </nav>
 
           <nav aria-label="Compliance & Filing" className="lg:col-span-3">
-            <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-gold-light mb-6">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-lime-soft mb-6">
               Compliance & Filing
             </h4>
             <ul className="space-y-3 text-sm text-gray-400">
@@ -109,7 +111,7 @@ export function Footer() {
                 <li key={l.name}>
                   <Link
                     href={l.href}
-                    className="hover:text-gold transition-colors"
+                    className="hover:text-lime transition-colors"
                   >
                     {l.name}
                   </Link>
@@ -119,17 +121,17 @@ export function Footer() {
           </nav>
 
           <div className="lg:col-span-3 space-y-6">
-            <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-gold-light">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-lime-soft">
               Get in Touch
             </h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li>
                 <a
                   href={`tel:${siteConfig.contact.phoneE164}`}
-                  className="flex items-center gap-3 hover:text-gold transition-colors"
+                  className="flex items-center gap-3 hover:text-lime transition-colors"
                 >
                   <Phone
-                    className="w-4 h-4 text-gold shrink-0"
+                    className="w-4 h-4 text-lime shrink-0"
                     aria-hidden="true"
                   />
                   {siteConfig.contact.phone}
@@ -138,10 +140,10 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="flex items-center gap-3 hover:text-gold transition-colors"
+                  className="flex items-center gap-3 hover:text-lime transition-colors"
                 >
                   <Mail
-                    className="w-4 h-4 text-gold shrink-0"
+                    className="w-4 h-4 text-lime shrink-0"
                     aria-hidden="true"
                   />
                   {siteConfig.contact.email}
@@ -149,7 +151,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Clock
-                  className="w-4 h-4 text-gold shrink-0"
+                  className="w-4 h-4 text-lime shrink-0"
                   aria-hidden="true"
                 />
                 {siteConfig.contact.workingHours}
@@ -161,7 +163,7 @@ export function Footer() {
                 <li key={l.name}>
                   <Link
                     href={l.href}
-                    className="text-xs uppercase tracking-widest font-bold text-gray-300 hover:text-gold transition-colors"
+                    className="text-xs uppercase tracking-widest font-bold text-gray-300 hover:text-lime transition-colors"
                   >
                     {l.name} →
                   </Link>
@@ -177,19 +179,19 @@ export function Footer() {
               key={o.city}
               className="not-italic text-sm text-gray-400 leading-relaxed"
             >
-              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold-light mb-2">
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-lime-soft mb-2">
                 {o.label} · {o.city}
               </p>
               <p className="flex items-start gap-3">
                 <MapPin
-                  className="w-4 h-4 text-gold shrink-0 mt-0.5"
+                  className="w-4 h-4 text-lime shrink-0 mt-0.5"
                   aria-hidden="true"
                 />
                 <a
                   href={o.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gold transition-colors"
+                  className="hover:text-lime transition-colors"
                 >
                   {o.addr}
                 </a>
@@ -207,7 +209,7 @@ export function Footer() {
               <li key={l.name}>
                 <Link
                   href={l.href}
-                  className="hover:text-gold transition-colors"
+                  className="hover:text-lime transition-colors"
                 >
                   {l.name}
                 </Link>

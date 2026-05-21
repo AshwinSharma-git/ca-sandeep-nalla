@@ -2,25 +2,28 @@ import Link from "next/link";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "gold" | "outline-light";
+type Variant = "primary" | "secondary" | "lime" | "ghost" | "outline-light";
 type Size = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-3 font-semibold rounded-lg transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-gold disabled:opacity-60 disabled:cursor-not-allowed";
+  "group relative inline-flex items-center justify-center gap-2.5 font-semibold rounded-xl transition-[transform,box-shadow,background-color,color] duration-300 ease-out focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-indigo disabled:opacity-60 disabled:cursor-not-allowed will-change-transform";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-navy text-white hover:bg-navy-light shadow-xl hover:shadow-2xl",
+    "bg-indigo text-white shadow-[0_10px_30px_-12px_rgba(61,67,201,0.55)] hover:bg-indigo-deep hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_rgba(61,67,201,0.6)] active:translate-y-0",
   secondary:
-    "bg-transparent border-2 border-navy text-navy hover:bg-navy/5",
-  gold: "bg-gold text-navy font-bold hover:bg-gold-light shadow-2xl",
+    "bg-transparent border border-ink/15 text-ink hover:border-indigo hover:text-indigo hover:bg-indigo-soft",
+  lime:
+    "bg-lime text-ink shadow-[0_10px_28px_-12px_rgba(122,194,60,0.55)] hover:bg-lime-deep hover:text-white hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_rgba(122,194,60,0.55)]",
+  ghost:
+    "bg-transparent text-ink hover:text-indigo",
   "outline-light":
-    "border border-navy/20 text-navy hover:bg-navy/5",
+    "border border-ink/15 text-ink hover:bg-ink/5 hover:border-ink/30",
 };
 
 const sizes: Record<Size, string> = {
   md: "px-6 py-3 text-sm",
-  lg: "px-8 py-4 text-base",
+  lg: "px-7 py-4 text-[15px]",
 };
 
 type SharedProps = {
@@ -33,6 +36,7 @@ type SharedProps = {
 type LinkButtonProps = SharedProps & {
   href: string;
   external?: boolean;
+  prefetch?: boolean;
 };
 
 type NativeButtonProps = SharedProps &
@@ -45,6 +49,7 @@ export function LinkButton({
   size = "md",
   className,
   children,
+  prefetch,
 }: LinkButtonProps) {
   const classes = cn(base, variants[variant], sizes[size], className);
   if (external) {
@@ -60,7 +65,7 @@ export function LinkButton({
     );
   }
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} className={classes} prefetch={prefetch}>
       {children}
     </Link>
   );

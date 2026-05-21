@@ -11,9 +11,9 @@ export function Industries() {
       <Container>
         <FadeIn className="mb-16">
           <SectionHeading
-            eyebrow="Who We Serve"
-            title="Specialised Practices for Every Client Type"
-            description="Tailored engagement models for startups, SMEs, professionals, and individuals — same partner-led quality."
+            eyebrow="Products for everyone"
+            title="Our Suite of Specialized Financial Services"
+            description="We offer a comprehensive range of services to meet all your tax and financial needs. Our expert team is committed to providing personalized solutions tailored to your specific requirements."
             align="center"
           />
         </FadeIn>
@@ -21,11 +21,11 @@ export function Industries() {
         <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {industries.map((ind) => (
             <StaggerItem key={ind.title}>
-              <article className="group h-full bg-off-white p-8 rounded-2xl border border-gold/10 hover:bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                <div className="w-14 h-14 rounded-2xl bg-navy flex items-center justify-center text-gold-light mb-6 shadow-lg group-hover:scale-105 transition-transform">
+              <article className="group h-full bg-mist p-8 rounded-2xl border border-lime/10 hover:bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                <div className="w-14 h-14 rounded-2xl bg-ink flex items-center justify-center text-lime-soft mb-6 shadow-lg group-hover:scale-105 transition-transform">
                   <ind.icon className="w-7 h-7" aria-hidden="true" />
                 </div>
-                <h3 className="font-display text-xl text-navy font-bold mb-3">
+                <h3 className="font-display text-xl text-ink font-bold mb-3">
                   {ind.title}
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-5 flex-1">
@@ -35,17 +35,17 @@ export function Industries() {
                   {ind.points.map((p) => (
                     <li
                       key={p}
-                      className="text-xs text-navy/80 flex items-start gap-2"
+                      className="text-xs text-ink/80 flex items-start gap-2"
                     >
                       <span
                         aria-hidden="true"
-                        className="text-gold mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0"
+                        className="text-lime mt-1.5 w-1 h-1 rounded-full bg-lime shrink-0"
                       />
                       {p}
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-navy group-hover:text-gold transition-colors">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-ink group-hover:text-lime transition-colors">
                   Talk to a CA
                   <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
                 </div>

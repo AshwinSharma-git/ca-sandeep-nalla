@@ -36,7 +36,7 @@ export const services: Service[] = [
   // Start a Business
   {
     title: "Private Limited Company",
-    desc: "Limited liability, separate legal identity, and the most fundable structure for ambitious founders.",
+    desc: "A private Company is a company which is owned by non-governmental organisations or a relatively small number of shareholders or members of a company.",
     icon: Building2,
     href: "/services/private-limited-company",
     category: "start-business",
@@ -79,17 +79,52 @@ export const services: Service[] = [
 
   // Audit & Assurance
   {
-    title: "Audit & Assurance",
-    desc: "Statutory, tax, GST, internal, revenue, and stock audits delivered with double-verification.",
+    title: "Statutory Audit",
+    desc: "A legally mandated review of a company's financial statements to verify accuracy and compliance under the Companies Act, 2013.",
     icon: ShieldCheck,
-    href: "/services/audit",
+    href: "/services/statutory-audit",
+    category: "audit",
+  },
+  {
+    title: "Income Tax Audit",
+    desc: "Comprehensive Income Tax Audits under Section 44AB for businesses and professionals — including Form 3CA/3CB/3CD preparation.",
+    icon: FileText,
+    href: "/services/income-tax-audit",
+    category: "audit",
+  },
+  {
+    title: "GST Audit",
+    desc: "GSTR-9C annual reconciliation and GST audit for businesses with aggregate turnover exceeding ₹5 crore.",
+    icon: Receipt,
+    href: "/services/gst-audit",
+    category: "audit",
+  },
+  {
+    title: "Internal Audit",
+    desc: "Independent and objective evaluation of internal controls, compliance systems, and operational processes.",
+    icon: ClipboardList,
+    href: "/services/internal-audit",
+    category: "audit",
+  },
+  {
+    title: "Revenue Audit",
+    desc: "Optimizing financial compliance through detailed revenue recognition testing — occurrence, completeness, accuracy, and cut-off.",
+    icon: ShieldCheck,
+    href: "/services/revenue-audit",
+    category: "audit",
+  },
+  {
+    title: "Stock Audit",
+    desc: "Inventory audit ensuring accuracy of physical goods against stock register — vital for transparency, compliance, and efficient inventory management.",
+    icon: Factory,
+    href: "/services/stock-audit",
     category: "audit",
   },
 
   // Return Filing
   {
     title: "Income Tax Filing",
-    desc: "ITR for salaried, HNI, and corporate filers — accurate, on time, and CBDT-aligned.",
+    desc: "According to the Income Tax Act, everyone in India, whether resident or nonresident, has to file income tax returns. Currently, tax is payable if the income exceeds Rs 2.5 lakh in a financial year.",
     icon: FileText,
     href: "/services/income-tax",
     category: "filing",
@@ -126,7 +161,7 @@ export const services: Service[] = [
   // Registrations
   {
     title: "GST Registration",
-    desc: "Regular, composition, and SEZ GST registrations within 48 hours.",
+    desc: "Goods and Services Tax (GST) revolutionized India's taxation system upon its introduction in July 2017.",
     icon: Receipt,
     href: "/services/gst",
     category: "registration",
@@ -194,13 +229,13 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    text: "Sandeep and his team set up our Private Limited Company in days — DSC, DIN, MOA, GST, and even our current account. Genuinely the fastest CA experience I've had.",
+    text: "AXIAFIN set up our Private Limited Company in days — DSC, DIN, MOA, GST, and even our current account. Genuinely the fastest CA experience I've had.",
     name: "Rajesh Varma",
     role: "Founder, TechFlow Systems",
     initials: "RV",
   },
   {
-    text: "We switched our GST compliance to CA Sandeep Nalla & Co. last year. Zero notices, perfectly reconciled ITC, and they actually respond when you call.",
+    text: "We switched our GST compliance to AXIAFIN last year. Zero notices, perfectly reconciled ITC, and they actually respond when you call.",
     name: "Ananya Kapoor",
     role: "Director, Radiant Exports",
     initials: "AK",

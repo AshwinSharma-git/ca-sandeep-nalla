@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { GoldDivider } from "@/components/ui/GoldDivider";
+import { BrandDivider } from "@/components/ui/BrandDivider";
 
 export default function GlobalError({
   error,
@@ -19,8 +19,8 @@ export default function GlobalError({
   return (
     <section className="min-h-[70vh] flex items-center pt-32 pb-20">
       <Container className="text-center max-w-xl space-y-6">
-        <GoldDivider align="center" />
-        <h1 className="font-display text-4xl text-navy font-bold">
+        <BrandDivider align="center" />
+        <h1 className="font-display text-4xl text-ink font-bold">
           Something went wrong
         </h1>
         <p className="text-gray-600">

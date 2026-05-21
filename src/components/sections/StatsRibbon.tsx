@@ -10,7 +10,7 @@ type Props = {
 
 export function StatsRibbon({ stats, bgImage }: Props) {
   return (
-    <section className="bg-navy py-20 overflow-hidden relative">
+    <section className="bg-ink py-20 overflow-hidden relative">
       {bgImage && (
         <div className="absolute inset-0 z-0">
           <Image
@@ -30,7 +30,7 @@ export function StatsRibbon({ stats, bgImage }: Props) {
         >
           {stats.map((stat) => (
             <div key={stat.label} className="space-y-4">
-              <dd className="font-display text-4xl md:text-5xl text-gold-light font-bold">
+              <dd className="font-display text-4xl md:text-5xl text-lime-soft font-bold">
                 {stat.val}
               </dd>
               <dt className="text-xs uppercase tracking-[0.2em] font-bold text-gray-400">

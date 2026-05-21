@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { GoldDivider } from "@/components/ui/GoldDivider";
+import { BrandDivider } from "@/components/ui/BrandDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +33,7 @@ export function PageHero({
     <section
       className={cn(
         "relative overflow-hidden pt-32 md:pt-36 pb-20",
-        isDark ? "bg-navy text-white" : "bg-off-white",
+        isDark ? "bg-ink text-white" : "bg-mist",
       )}
     >
       {bgImage && (
@@ -51,7 +51,7 @@ export function PageHero({
             )}
           />
           {!isDark && (
-            <div className="absolute inset-0 bg-gradient-to-tr from-off-white via-off-white/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-mist via-mist/80 to-transparent" />
           )}
         </div>
       )}
@@ -67,18 +67,18 @@ export function PageHero({
               className={cn(
                 "inline-flex items-center gap-2 px-4 py-1.5 rounded-full",
                 isDark
-                  ? "border border-gold/30 bg-gold/10"
-                  : "border-l-2 border-gold bg-gold/5 rounded-none px-4 py-1",
+                  ? "border border-lime/30 bg-lime/10"
+                  : "border-l-2 border-lime bg-lime/5 rounded-none px-4 py-1",
               )}
             >
               <Eyebrow>{eyebrow}</Eyebrow>
             </div>
           )}
-          {align === "left" && !isDark && <GoldDivider />}
+          {align === "left" && !isDark && <BrandDivider />}
           <h1
             className={cn(
               "font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-balance",
-              isDark ? "text-white" : "text-navy",
+              isDark ? "text-white" : "text-ink",
             )}
           >
             {title}

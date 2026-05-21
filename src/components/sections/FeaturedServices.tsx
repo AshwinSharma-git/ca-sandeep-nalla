@@ -9,7 +9,7 @@ import { LinkButton } from "@/components/ui/Button";
 const featuredTitles = new Set([
   "Private Limited Company",
   "GST Registration",
-  "Audit & Assurance",
+  "Statutory Audit",
   "Income Tax Filing",
   "ROC Filings",
   "MSME / Udyam",
@@ -23,7 +23,7 @@ export function FeaturedServices() {
       <Container>
         <FadeIn className="flex flex-col md:flex-row md:justify-between md:items-end gap-8 mb-16">
           <SectionHeading
-            eyebrow="Featured Services"
+            eyebrow="Start Business As"
             title="From Incorporation to Audit — All Under One Roof"
             description="The most-requested services from our Hyderabad practice — each delivered by a senior CA."
           />

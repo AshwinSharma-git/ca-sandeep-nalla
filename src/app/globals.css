@@ -4,13 +4,24 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-playfair), ui-serif, Georgia, serif;
 
-  --color-navy: #000a24;
-  --color-navy-light: #14213d;
-  --color-gold: #d4af37;
-  --color-gold-light: #ffe088;
-  --color-ivory: #faf7f2;
-  --color-off-white: #f8f6f2;
-  --color-charcoal: #1f2937;
+  /* Brand */
+  --color-indigo: #3d43c9;
+  --color-indigo-deep: #2a2f9e;
+  --color-indigo-soft: #ecedfa;
+  --color-indigo-glow: rgba(61, 67, 201, 0.18);
+
+  --color-lime: #7ac23c;
+  --color-lime-deep: #5fa52a;
+  --color-lime-soft: #ecf6dc;
+  --color-lime-glow: rgba(122, 194, 60, 0.22);
+
+  /* Neutrals */
+  --color-ink: #0e1024;
+  --color-ink-light: #1f2348;
+  --color-slate: #4a5063;
+  --color-mist: #f6f7fb;
+  --color-pearl: #edeff6;
+  --color-cloud: #ffffff;
 }
 
 @layer base {
@@ -22,18 +33,22 @@
   }
 
   body {
-    background-color: var(--color-off-white);
-    color: var(--color-charcoal);
+    background-color: var(--color-mist);
+    color: var(--color-slate);
     font-family: var(--font-sans);
+    background-image:
+      radial-gradient(at 12% 8%, rgba(61, 67, 201, 0.04) 0, transparent 45%),
+      radial-gradient(at 88% 92%, rgba(122, 194, 60, 0.04) 0, transparent 45%);
+    background-attachment: fixed;
   }
 
   ::selection {
-    background-color: var(--color-gold);
-    color: var(--color-navy);
+    background-color: var(--color-indigo);
+    color: #fff;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-gold);
+    outline: 2px solid var(--color-indigo);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -41,23 +56,95 @@
 
 @layer components {
   .glass-card {
-    background-color: rgb(255 255 255 / 0.8);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgb(255 255 255 / 0.4);
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    background-color: rgb(255 255 255 / 0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgb(255 255 255 / 0.55);
+    box-shadow:
+      0 1px 0 0 rgb(255 255 255 / 0.6) inset,
+      0 1px 2px 0 rgb(14 16 36 / 0.04);
   }
 
   .luxury-shadow {
-    box-shadow: 0 20px 40px -10px rgba(20, 33, 61, 0.08);
+    box-shadow:
+      0 1px 1px rgba(14, 16, 36, 0.04),
+      0 20px 40px -10px rgba(14, 16, 36, 0.10);
   }
 
-  .gold-gradient {
-    background: linear-gradient(135deg, #d4af37 0%, #ffe088 100%);
+  .brand-gradient {
+    background: linear-gradient(135deg, #3d43c9 0%, #5b62e2 60%, #7ac23c 100%);
   }
 
-  .navy-gradient {
-    background: linear-gradient(135deg, #000a24 0%, #14213d 100%);
+  .indigo-gradient {
+    background: linear-gradient(135deg, #3d43c9 0%, #2a2f9e 100%);
   }
+
+  .ink-gradient {
+    background: linear-gradient(140deg, #0e1024 0%, #1f2348 100%);
+  }
+
+  .lime-gradient {
+    background: linear-gradient(135deg, #7ac23c 0%, #5fa52a 100%);
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(120deg, #3d43c9 0%, #7ac23c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hairline {
+    background-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--color-indigo) 25%,
+      var(--color-lime) 75%,
+      transparent 100%
+    );
+    height: 1px;
+  }
+
+  /* Subtle grid texture for dark sections */
+  .grid-texture {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* Animated underline for nav-style links */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.35s ease;
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+
+  /* Marquee for trust strip etc */
+  .marquee {
+    animation: marquee 28s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee {
+      animation: none;
+    }
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

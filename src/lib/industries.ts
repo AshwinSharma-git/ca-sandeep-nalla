@@ -1,7 +1,7 @@
 import {
-  Rocket,
-  Building2,
   Briefcase,
+  Award,
+  Building2,
   User,
   type LucideIcon,
 } from "lucide-react";
@@ -15,42 +15,42 @@ export type Industry = {
 
 export const industries: Industry[] = [
   {
-    icon: Rocket,
-    title: "For Startups",
-    desc: "From incorporation to your first audit — we set the financial foundation that investors trust.",
+    icon: Award,
+    title: "For Expertise",
+    desc: "Experience unparalleled expertise with us. Our seasoned team delivers tailored solutions and strategic insights to navigate any challenge.",
     points: [
-      "Company incorporation & founder agreements",
-      "DPIIT recognition & angel-tax exemption",
-      "Cap-table, ESOP & funding readiness",
+      "Domain-led strategic advisory",
+      "Senior CA-led engagements",
+      "Industry-specific solutions",
+    ],
+  },
+  {
+    icon: Briefcase,
+    title: "For Experts",
+    desc: "Join forces with us to elevate your business. Our seasoned professionals provide personalized support and innovative solutions for success.",
+    points: [
+      "Practice-level compliance",
+      "Section 44ADA advisory",
+      "Tax-efficient structuring",
     ],
   },
   {
     icon: Building2,
     title: "For SMEs",
-    desc: "Cost-effective accounting, tax, and compliance designed around how growing Indian businesses actually operate.",
+    desc: "We're committed to SME success. Our cost-effective solutions and personalized guidance empower small and medium-sized enterprises to thrive.",
     points: [
       "Monthly bookkeeping & MIS",
-      "GST, TDS & ROC compliance calendar",
+      "GST · TDS · ROC calendar",
       "Working-capital project reports",
-    ],
-  },
-  {
-    icon: Briefcase,
-    title: "For Professionals",
-    desc: "Doctors, architects, consultants and creators — financial structuring and audit handled discreetly.",
-    points: [
-      "Presumptive taxation (44ADA) advisory",
-      "GST & TDS on professional income",
-      "Income & expense optimisation",
     ],
   },
   {
     icon: User,
     title: "For Individuals",
-    desc: "Personal tax planning, ITR filing, capital gains, and NRI services — all with a direct line to a CA.",
+    desc: "Achieve your financial goals with us. Our personalized services and expert guidance ensure you're empowered to secure your financial future.",
     points: [
-      "Salaried, HNI & NRI ITR filing",
-      "Capital gains on equity, property, crypto",
+      "Salaried · HNI · NRI ITR filing",
+      "Capital gains optimisation",
       "Tax-saving investment planning",
     ],
   },

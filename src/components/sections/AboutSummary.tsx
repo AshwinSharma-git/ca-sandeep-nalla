@@ -9,7 +9,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { GoldDivider } from "@/components/ui/GoldDivider";
+import { BrandDivider } from "@/components/ui/BrandDivider";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 type Stat = { label: string; val: string; icon: LucideIcon };
@@ -27,48 +28,50 @@ export function AboutSummary() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           <FadeIn direction="up" className="relative">
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden luxury-shadow grayscale hover:grayscale-0 transition-all duration-700 relative">
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden luxury-shadow relative">
               <Image
-                src="https://images.unsplash.com/photo-1507679799987-c7377f0f6311?auto=format&fit=crop&q=80&w=1742"
-                alt="Senior partner of CA Sandeep Nalla & Co. in office"
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1740"
+                alt="The AXIAFIN team in collaboration"
                 fill
                 sizes="(min-width: 1024px) 40vw, 90vw"
                 className="object-cover"
               />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent"
+              />
             </div>
-            <div className="absolute -bottom-10 -right-4 sm:-right-10 bg-white p-8 sm:p-10 rounded-2xl luxury-shadow border border-gold/10 max-w-[280px]">
-              <p className="font-display text-5xl sm:text-6xl text-gold font-bold leading-none mb-3">
-                15+
+            <div className="absolute -bottom-10 -right-4 sm:-right-10 bg-white p-8 sm:p-10 rounded-2xl luxury-shadow border border-ink/5 max-w-[300px]">
+              <p className="font-display text-4xl sm:text-5xl text-gradient-brand font-bold leading-none mb-3">
+                Build Your Business
               </p>
-              <p className="text-xs font-bold uppercase tracking-tight text-navy leading-snug">
-                Years Building Financial Confidence
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate leading-snug">
+                With a partner who has your back
               </p>
             </div>
           </FadeIn>
 
           <div className="space-y-8">
-            <GoldDivider />
-            <p className="text-xs uppercase tracking-[0.3em] font-bold text-gold">
-              About the Firm
-            </p>
-            <h2 className="font-display text-4xl text-navy font-bold leading-tight md:text-5xl text-balance">
-              Personalised Financial Services. Strategic Business Guidance.
+            <BrandDivider />
+            <Eyebrow>About AXIAFIN</Eyebrow>
+            <h2 className="font-display text-4xl text-ink font-bold leading-[1.05] md:text-5xl text-balance">
+              Meet the team that{" "}
+              <span className="text-gradient-brand italic font-medium">
+                makes it happen
+              </span>
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              At CA Sandeep Nalla &amp; Co., we deliver unparalleled financial
-              services tailored to the diverse needs of our clients — from
-              first-time founders to multi-jurisdiction enterprises. Our
-              mission is simple: provide the best value to your time and money,
-              backed by precise compliance and senior-CA accountability.
+            <p className="text-slate text-lg leading-relaxed">
+              At AXIAFIN, we are dedicated to providing unparalleled financial
+              services tailored to meet the diverse needs of our clients.
             </p>
 
-            <dl className="grid grid-cols-2 gap-x-12 gap-y-10 pt-4">
+            <dl className="grid grid-cols-2 gap-x-12 gap-y-8 pt-2">
               {stats.map((stat) => (
                 <div key={stat.label} className="space-y-2">
-                  <dd className="font-display text-2xl text-navy font-bold">
+                  <dd className="font-display text-3xl text-ink font-bold">
                     {stat.val}
                   </dd>
-                  <dt className="text-[10px] uppercase tracking-widest font-bold text-gray-400">
+                  <dt className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate/60">
                     {stat.label}
                   </dt>
                 </div>
@@ -77,13 +80,13 @@ export function AboutSummary() {
 
             <Link
               href="/about"
-              className="inline-flex items-center gap-4 group pt-4"
+              className="inline-flex items-center gap-4 group pt-2"
             >
-              <span className="font-bold text-sm text-navy border-b-2 border-gold/30 pb-1 group-hover:border-gold transition-all">
-                Discover Our Story
+              <span className="font-bold text-sm text-ink border-b-2 border-indigo/40 pb-1 group-hover:border-indigo group-hover:text-indigo transition-all">
+                More About Us
               </span>
               <ArrowRight
-                className="w-5 h-5 text-gold group-hover:translate-x-1 transition-transform"
+                className="w-5 h-5 text-indigo group-hover:translate-x-1 transition-transform"
                 aria-hidden="true"
               />
             </Link>

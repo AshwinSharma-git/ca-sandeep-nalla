@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { TrustStrip } from "@/components/sections/TrustStrip";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { AboutSummary } from "@/components/sections/AboutSummary";
 import { Industries } from "@/components/sections/Industries";
@@ -13,6 +14,7 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden">
       <Hero />
+      <TrustStrip />
       <WhyChooseUs />
       <AboutSummary />
       <FeaturedServices />
@@ -23,14 +25,14 @@ export default function HomePage() {
       <CTASection
         title={
           <>
-            Let&apos;s Build Your Business with{" "}
-            <span className="text-gold italic font-medium">
-              Complete Financial Confidence
+            We Help Businesses to Create{" "}
+            <span className="text-gradient-brand italic font-medium">
+              Big Ideas
             </span>
           </>
         }
-        description="Whether you're starting a new business, filing taxes, handling compliance, or scaling operations — our expert team is here to guide you every step of the way."
-        ctaLabel="Book Free Consultation"
+        description="We're here to help! Whether you have questions, feedback, or inquiries, don't hesitate to reach out."
+        ctaLabel="Contact Us"
         ctaHref="/contact"
       />
     </div>

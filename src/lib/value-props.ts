@@ -15,8 +15,8 @@ export type ValueProp = {
 export const valueProps: ValueProp[] = [
   {
     icon: TrendingUp,
-    title: "Maximum Tax Savings",
-    desc: "Smart, lawful tax planning that protects every rupee — deductions, credits, structuring, and timing handled by senior CAs.",
+    title: "Maximum tax savings",
+    desc: "Get the most out of your tax savings! By smartly planning your taxes, you can keep more money in your pocket. Explore deductions, tax credits, retirement accounts, and other strategies to minimize what you owe.",
     bullets: [
       "Strategic deductions & exemptions",
       "Capital gains structuring",
@@ -25,8 +25,8 @@ export const valueProps: ValueProp[] = [
   },
   {
     icon: Zap,
-    title: "Unparalleled Speed",
-    desc: "Tech-driven workflows, dedicated associates, and clear timelines so your filings, registrations, and approvals close fast.",
+    title: "Unparalleled speed",
+    desc: "Speed matters! In today's fast-paced world, businesses need to move quickly to stay ahead. By streamlining processes, embracing technology, and empowering employees, you can achieve unparalleled speed and efficiency in your operations.",
     bullets: [
       "48-hour GST registration",
       "Same-day document turnaround",
@@ -36,7 +36,7 @@ export const valueProps: ValueProp[] = [
   {
     icon: ShieldCheck,
     title: "Accurate Compliance",
-    desc: "Strict adherence to the Income Tax Act, GST law, Companies Act, and ROC requirements — double-verified before every submission.",
+    desc: "Stay on the right side of the law! Accurate compliance means following rules and regulations to the letter. Keep up with changes, set up internal checks, and make sure everyone in your organization understands their responsibilities to maintain accurate compliance.",
     bullets: [
       "CBDT / CBIC aligned filings",
       "Double-verification model",

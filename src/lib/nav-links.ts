@@ -33,10 +33,12 @@ const servicesGroups: NavGroup[] = [
   {
     heading: "Audit & Assurance",
     items: [
-      { name: "Statutory Audit", href: "/services/audit" },
-      { name: "Income Tax Audit", href: "/services/audit#income-tax-audit" },
-      { name: "GST Audit", href: "/services/audit#gst-audit" },
-      { name: "Internal & Stock Audit", href: "/services/audit#internal-audit" },
+      { name: "Statutory Audit", href: "/services/statutory-audit" },
+      { name: "Income Tax Audit", href: "/services/income-tax-audit" },
+      { name: "GST Audit", href: "/services/gst-audit" },
+      { name: "Internal Audit", href: "/services/internal-audit" },
+      { name: "Revenue Audit", href: "/services/revenue-audit" },
+      { name: "Stock Audit", href: "/services/stock-audit" },
     ],
   },
   {

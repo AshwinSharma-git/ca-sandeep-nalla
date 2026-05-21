@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     "MSME Udyam Registration",
     "Startup India DPIIT",
     "ROC Filing Services",
-    "CA Sandeep Nalla",
+    "AXIAFIN",
     "Financial Consulting India",
   ],
   alternates: {
@@ -73,13 +74,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
   category: "finance",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000a24",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f7fb" },
+    { media: "(prefers-color-scheme: dark)", color: "#0e1024" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
@@ -140,13 +144,14 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-off-white text-charcoal font-sans antialiased">
+      <body className="bg-mist text-slate font-sans antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-navy focus:text-white focus:px-4 focus:py-2 focus:rounded-md"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-ink focus:text-white focus:px-4 focus:py-2 focus:rounded-md"
         >
           Skip to main content
         </a>
+        <ScrollProgress />
         <Navbar />
         <main id="main">{children}</main>
         <Footer />
