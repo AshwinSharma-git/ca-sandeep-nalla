@@ -101,8 +101,8 @@ export function Hero() {
           <div className="relative glass-card rounded-3xl p-6 luxury-shadow">
             <div className="relative rounded-2xl overflow-hidden mb-6 aspect-[3/4]">
               <Image
-                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1740"
-                alt="AXIAFIN Chartered Accountants reviewing financial reports"
+                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1740"
+                alt="AXIAFIN Chartered Accountants — strategic financial review"
                 fill
                 priority
                 sizes="(min-width: 768px) 40vw, 100vw"
