@@ -23,6 +23,22 @@ const nextConfig: NextConfig = {
         destination: "/services/private-limited-company",
         permanent: true,
       },
+      // Old combined URLs → new dedicated landing pages
+      {
+        source: "/services/society-trust",
+        destination: "/services/society",
+        permanent: true,
+      },
+      {
+        source: "/services/payroll-compliance",
+        destination: "/services/esic-returns",
+        permanent: true,
+      },
+      {
+        source: "/services/gst-notices-refunds",
+        destination: "/services/gst-notices",
+        permanent: true,
+      },
     ];
   },
 };

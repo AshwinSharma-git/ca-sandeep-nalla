@@ -443,11 +443,11 @@ export function ServiceDetailTemplate({ data }: Props) {
         </Container>
       </section>
 
-      {/* BUNDLE / Documents Required */}
+      {/* BUNDLE / Documents Required / Checklist */}
       {data.bundle && (
         <section className="py-20 md:py-24 bg-white">
           <Container>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 bg-pearl rounded-[2rem] md:rounded-[2.5rem] p-10 md:p-16 border border-lime/10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 bg-pearl rounded-[2rem] md:rounded-[2.5rem] p-8 sm:p-10 md:p-16 border border-lime/10">
               <div className="lg:col-span-5 space-y-6">
                 <BrandDivider />
                 <Eyebrow>Bundled Together</Eyebrow>
@@ -474,6 +474,37 @@ export function ServiceDetailTemplate({ data }: Props) {
                 ))}
               </ul>
             </div>
+          </Container>
+        </section>
+      )}
+
+      {/* HOW DOES IT WORK */}
+      {data.howItWorks && (
+        <section className="py-20 md:py-24 bg-mist">
+          <Container>
+            <FadeIn className="text-center max-w-3xl mx-auto mb-12 space-y-4">
+              <Eyebrow>Workflow</Eyebrow>
+              <h2 className="font-display text-3xl md:text-4xl text-ink font-bold">
+                {data.howItWorks.title}
+              </h2>
+              <BrandDivider align="center" />
+            </FadeIn>
+            <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {data.howItWorks.items.map((step, idx) => (
+                <StaggerItem key={step}>
+                  <article className="h-full bg-white p-6 rounded-2xl border border-lime/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <span className="font-display text-3xl text-lime font-bold leading-none shrink-0">
+                        {String(idx + 1).padStart(2, "0")}
+                      </span>
+                      <p className="text-sm text-ink font-medium leading-relaxed pt-1">
+                        {step}
+                      </p>
+                    </div>
+                  </article>
+                </StaggerItem>
+              ))}
+            </Stagger>
           </Container>
         </section>
       )}

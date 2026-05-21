@@ -69,6 +69,7 @@ export type ServicePage = {
   bundle?: { title: string; items: string[] };
   extraSections?: ExtraSection[];
   tables?: DataTable[];
+  howItWorks?: { title: string; items: string[] };
   whyChoose?: { heading: string; body: string; image?: string };
   cta: { headline: string; sub: string; label: string };
 };
@@ -116,6 +117,35 @@ const img = {
     "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&q=80&w=1600",
   scale:
     "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1600",
+  // Newly added distinct images for split pages
+  piggyBank:
+    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&q=80&w=1600",
+  insurance:
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1600",
+  investor:
+    "https://images.unsplash.com/photo-1573164574230-db1d5e960238?auto=format&fit=crop&q=80&w=1600",
+  community2:
+    "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=1600",
+  govtBuilding:
+    "https://images.unsplash.com/photo-1541872703-74c5e44368f1?auto=format&fit=crop&q=80&w=1600",
+  handshake:
+    "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1600",
+  charity2:
+    "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1600",
+  retirement:
+    "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&q=80&w=1600",
+  documents:
+    "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&q=80&w=1600",
+  startupInvest:
+    "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1600",
+  email:
+    "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=1600",
+  refundCash:
+    "https://images.unsplash.com/photo-1559526324-c1f275fbfa32?auto=format&fit=crop&q=80&w=1600",
+  trust:
+    "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&q=80&w=1600",
+  payroll:
+    "https://images.unsplash.com/photo-1554224155-3a589877b5f1?auto=format&fit=crop&q=80&w=1600",
 };
 
 export const servicePages: Record<string, ServicePage> = {
@@ -410,12 +440,23 @@ export const servicePages: Record<string, ServicePage> = {
       items: [
         "Application for registration of partnership (Form 1)",
         "Certified original copy of Partnership Deed",
-        "Specimen of an affidavit certifying all details mentioned in the partnership deed",
+        "Specimen of an affidavit certifying all the details mentioned in the partnership deed and documents are correct",
         "PAN card and address proof of the partners",
         "PAN card and address of the firm",
-        "Proof of principal place of business (ownership documents or rental/lease agreement)",
-        "GST Registration, MSME Registration, Labour License",
-        "PAN Card & TAN Number",
+        "Proof of principal place of business of the firm (ownership documents or rental/lease agreement)",
+      ],
+    },
+    howItWorks: {
+      title: "How Does It Work",
+      items: [
+        "Partnership Deed Drafting",
+        "Filing of deed and other documents with the Registrar of Firms",
+        "Issue of registration certificate",
+        "GST Registration",
+        "MSME Registration",
+        "Labour license (Challan to be incurred by the promoters)",
+        "PAN Card",
+        "TAN Number",
       ],
     },
     cta: {
@@ -630,56 +671,52 @@ export const servicePages: Record<string, ServicePage> = {
     },
   },
 
-  "society-trust": {
-    slug: "society-trust",
-    title: "Society & Trust Registration",
-    metaTitle: "Society & Trust Registration in India | Hyderabad",
+  society: {
+    slug: "society",
+    title: "Society Registration",
+    metaTitle: "Society Registration in India | Hyderabad | AXIAFIN",
     metaDescription:
-      "Empowering Communities. Society Registration in India is governed under the Society Registration Act, 1860. Trust Registration governed by Indian Trust Act, 1882.",
+      "Empowering Communities, Understanding Societies. Society registration in India is governed under the Society Registration Act, 1860 — AXIAFIN provides expert society registration services in Hyderabad.",
     eyebrow: "Start a Business",
     hero: {
-      titleLead: "Society & Trust",
+      titleLead: "Society",
       titleAccent: "Registration",
       description:
-        "Empowering Communities, Understanding Societies. A society is an association of several individuals combined using a mutual accord to deliberate, govern and act cooperatively for some communal purpose. Nurturing Social Responsibility Through Trust Formation.",
-      image: img.community,
+        "Empowering Communities, Understanding Societies. A society is an association of several individuals combined using a mutual accord to deliberate, govern and act cooperatively for some communal purpose.",
+      image: img.community2,
     },
     intro: {
-      heading: "What is Society & Trust Registration?",
-      body: "A society registration is the process of legally registering an association of individuals who come together for a common purpose — such as charitable activities, education, sports, music, culture, religion, art, or social welfare. In India, society registration in India is governed under the Society Registration Act, 1860, which provides legal recognition and ensures that the society can own property, open bank accounts, and file legal claims. With register society online services, registering a society has become simpler and more accessible.",
+      heading: "What is Society Registration?",
+      body: "A society registration is the process of legally registering an association of individuals who come together for a common purpose — such as charitable activities, education, sports, music, culture, religion, art, or social welfare. In India, society registration in India is governed under the Society Registration Act, 1860, which provides legal recognition and ensures that the society can own property, open bank accounts, and file legal claims. With register society online services, registering a society has become simpler and more accessible for organizations and individuals.",
       image: img.charity,
     },
     extraSections: [
       {
         heading: "Legal Framework for Society Registration",
-        body: "A society can be created by a minimum of 7 members. Members can include individuals from India, companies, foreigners, or other registered societies for preparing the Memorandum of Association. Society registration in Hyderabad is maintained by the state government, so the application must be submitted to the relevant authority where the registered office of the society is situated. Key steps include: Choosing the society name, Preparing the Memorandum of Association, and Drafting Rules & Regulations for the society. Only registered societies can hold property legally and can file or defend legal suits, making co-operative society registration and firm society registration essential for formal operations.",
+        body: "A society can be created by a minimum of 7 members. Members can include individuals from India, companies, foreigners, or other registered societies for preparing the Memorandum of Association. Society registration in Hyderabad is maintained by the state government, so the application must be submitted to the relevant authority where the registered office of the society is situated. Similar to Partnership firms, society can also be either unregistered or registered. But, only the registered societies will be able to withstand consigned properties and/or have an ensemble filed against or by the society.",
         image: img.scale,
         align: "right",
+        bullets: [
+          "Choosing the society name",
+          "Preparing the Memorandum of Association",
+          "Drafting Rules & Regulations for the society",
+          "Only registered societies can hold property legally and can file or defend legal suits",
+        ],
       },
       {
-        heading: "About Trust Registration in Hyderabad",
-        body: "Anyone can register a trust in India under the Indian Trust Act, 1882. This Act governs private trust registration across India, ensuring legal protection and structure for charitable and non-charitable purposes. While the Act applies across India, certain charitable trust registrations are governed by state-specific laws like The Maharashtra Public Trust Act, 1950. A trust registration can be private (for specific beneficiaries) or public (for charitable or social causes). Whether you're creating a charitable foundation trust, religious trust, or non-profit organization, proper registration helps you gain credibility, tax exemptions, and donor confidence.",
-        image: img.charity,
+        heading: "Unlocking Growth Potential with a Society",
+        body: "For Society registration, the establishing members must agree with the name of society first and then prepare for the Memorandum, followed by Rules & Regulations of the society. Society registration is maintained by state governments. Thus, the application for society registration must be created to the specific authority of the state, where the registered office of the society is situated.",
+        image: img.govtBuilding,
         align: "left",
       },
     ],
-    advantagesHeading: "Why Register a Society / Benefits of Charitable Trust Registration",
+    advantagesHeading: "Why Register a Society?",
     advantagesImage: img.signing,
     advantages: [
       {
         icon: Landmark,
         title: "Legal Recognition",
-        desc: "Gives the society/trust a separate legal entity for contracts, assets, and bank accounts. A registered trust has a legal identity, enabling it to own property, enter contracts, and sue or be sued.",
-      },
-      {
-        icon: ScrollText,
-        title: "Tax Benefits",
-        desc: "Charity trust registration allows access to income tax exemptions under Section 12A and 80G.",
-      },
-      {
-        icon: HandCoins,
-        title: "Eligibility for Grants & Funding",
-        desc: "Registered societies can receive grants, donations, and other support. Donors prefer contributing to legally registered trusts.",
+        desc: "Gives the society a separate legal entity for contracts, assets, and bank accounts.",
       },
       {
         icon: UserCheck,
@@ -687,19 +724,73 @@ export const servicePages: Record<string, ServicePage> = {
         desc: "Registered societies are recognized by the government and public for transparency.",
       },
       {
-        icon: Briefcase,
-        title: "Continuity / Perpetual Succession",
-        desc: "Societies and Trusts have perpetual succession and can continue operations despite changes in membership/trustees. The trust continues to exist even after the lifetime of the trustees.",
+        icon: HandCoins,
+        title: "Eligibility for Grants & Funding",
+        desc: "Registered societies can receive grants, donations, and other support.",
       },
       {
-        icon: ShieldCheck,
-        title: "Transparency",
-        desc: "Registration ensures accountability in fund usage and trust operations.",
+        icon: Briefcase,
+        title: "Continuity",
+        desc: "Societies have perpetual succession and can continue operations despite changes in membership.",
       },
     ],
-    disadvantagesHeading: "Types of Trusts",
-    disadvantagesImage: img.scale,
-    disadvantages: [
+    whyChoose: {
+      heading: "Why Choose AXIAFIN for Your Society Registration",
+      body: "At AXIAFIN, we provide expert society registration services in Hyderabad and across India. Our team handles the entire process from selecting the society name and drafting the Memorandum of Association to filing with the Registrar of Societies — including online registration where available. We ensure complete legal compliance so your society can focus on its communal purpose.",
+      image: img.team,
+    },
+    processHeading: "Society Registration Process",
+    process: [
+      { step: "01", title: "Selection of society name", desc: "Choose a unique name for the society." },
+      { step: "02", title: "Drafting Memorandum of Association (MOA)", desc: "Prepare the Memorandum of Association." },
+      { step: "03", title: "Preparing Rules & Regulations", desc: "Drafting Rules & Regulations for the society." },
+      { step: "04", title: "Submission of documents", desc: "Submission of documents to Registrar of Societies." },
+      { step: "05", title: "Payment of fees", desc: "Payment of applicable society registration fees." },
+      { step: "06", title: "Issuance of Certificate of Registration", desc: "Online registration for society is also available, allowing applicants to register a society easily without visiting government offices." },
+    ],
+    cta: {
+      headline: "Embracing the Society",
+      sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
+      label: "Contact Now",
+    },
+  },
+
+  trust: {
+    slug: "trust",
+    title: "Trust Registration",
+    metaTitle: "Trust Registration in Hyderabad | Charitable, Private & Public Trusts | AXIAFIN",
+    metaDescription:
+      "Nurturing Social Responsibility Through Trust Formation. AXIAFIN provides expert charitable, private, and public trust registration services in Hyderabad under the Indian Trust Act, 1882.",
+    eyebrow: "Start a Business",
+    hero: {
+      titleLead: "Trust",
+      titleAccent: "Registration in Hyderabad",
+      description:
+        "Nurturing Social Responsibility Through Trust Formation. Anyone can register a trust in India under the Indian Trust Act, 1882. This Act governs private trust registration across India, ensuring legal protection and structure for charitable and non-charitable purposes.",
+      image: img.trust,
+    },
+    intro: {
+      heading: "About Trust Registration in Hyderabad",
+      body: "While the Indian Trust Act, 1882 applies across India, certain charitable trust registrations are governed by state-specific laws like The Maharashtra Public Trust Act, 1950. A trust registration can be private (for specific beneficiaries) or public (for charitable or social causes). Whether you're creating a charitable foundation trust, religious trust, or non-profit organization, proper registration helps you gain credibility, tax exemptions, and donor confidence.",
+      image: img.charity2,
+    },
+    extraSections: [
+      {
+        heading: "Unlocking Growth Potential with a Trust",
+        body: "Trust registration provides legal recognition, allowing your trust to own property, enter into contracts, and pursue its charitable or private objectives. Registered trusts are eligible for income-tax exemption under Section 12A and donations can attract Section 80G deductions for donors — making fundraising significantly easier.",
+        image: img.handshake,
+        align: "right",
+      },
+      {
+        heading: "Parties in a Trust",
+        body: "A trust involves three key parties: the Author/Settlor/Trustor/Donor (the person who wants to transfer his property and reposes confidence on another for the creation of the trust), the Trustee (the person who accepts the confidence for the creation of the trust), and the Beneficiary (the person who will benefit from the trust in the near future). Each party has distinct responsibilities defined in the trust deed.",
+        image: img.scale,
+        align: "left",
+      },
+    ],
+    advantagesHeading: "Types of Trusts",
+    advantagesImage: img.documents,
+    advantages: [
       {
         icon: UserCheck,
         title: "Private Trust Registration",
@@ -712,18 +803,23 @@ export const servicePages: Record<string, ServicePage> = {
       },
       {
         icon: Landmark,
-        title: "Author / Settlor / Trustor / Donor",
-        desc: "The person who wants to transfer his property and reposes confidence on another for the creation of the trust.",
-      },
-      {
-        icon: ShieldCheck,
-        title: "Trustee",
-        desc: "The person who accepts the confidence for the creation of the trust.",
+        title: "Legal Recognition",
+        desc: "A registered trust has a legal identity, enabling it to own property, enter contracts, and sue or be sued.",
       },
       {
         icon: HandCoins,
-        title: "Beneficiary",
-        desc: "The person who will benefit from the trust in the near future.",
+        title: "Tax Benefits",
+        desc: "Charity trust registration allows access to income tax exemptions under Section 12A and 80G.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Credibility for Donations",
+        desc: "Donors prefer contributing to legally registered trusts.",
+      },
+      {
+        icon: Briefcase,
+        title: "Perpetual Succession",
+        desc: "The trust continues to exist even after the lifetime of the trustees. Transparency — Registration ensures accountability in fund usage and trust operations.",
       },
     ],
     whyChoose: {
@@ -731,13 +827,12 @@ export const servicePages: Record<string, ServicePage> = {
       body: "We specialize in: Charitable Trust Registration in Hyderabad, Private & Public Trust Registration, Trust Deed Drafting and Filing, Charitable Society Registration, Charitable Trust GST Registration Assistance, and Foundation Trust Registration. Our experts ensure complete legal compliance and timely filing under the Charitable Trust Registration Act.",
       image: img.team,
     },
-    processHeading: "Society Registration Process",
     process: [
-      { step: "01", title: "Selection of society name", desc: "Choose a unique name for the society or trust." },
-      { step: "02", title: "Drafting Memorandum of Association (MOA)", desc: "Prepare the Memorandum of Association and Trust Deed (on stamp paper)." },
-      { step: "03", title: "Preparing Rules & Regulations", desc: "Drafting Rules & Regulations for the society or trust." },
-      { step: "04", title: "Submission of documents", desc: "Submission of documents to Registrar of Societies along with payment of applicable society registration fees." },
-      { step: "05", title: "Issuance of Certificate", desc: "Issuance of Certificate of Registration. Online registration for society is also available, allowing applicants to register a society easily without visiting government offices." },
+      { step: "01", title: "Trust Deed Drafting", desc: "Prepare the Trust Deed on stamp paper as per applicable State stamp law." },
+      { step: "02", title: "Documentation", desc: "Collate identity, address proof of trustees, settlor, and PAN of the trust." },
+      { step: "03", title: "Witnesses & Execution", desc: "Two witnesses sign the Trust Deed during registration." },
+      { step: "04", title: "Registrar Submission", desc: "Submit Trust Deed and supporting documents to the Sub-Registrar." },
+      { step: "05", title: "12A / 80G Filing", desc: "Income-tax exemption applications filed and tracked to certificate issuance." },
     ],
     bundle: {
       title: "Documents Required for Trust Registration",
@@ -751,7 +846,7 @@ export const servicePages: Record<string, ServicePage> = {
       ],
     },
     cta: {
-      headline: "Embracing the Society & Trust",
+      headline: "Embracing the Trust",
       sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
       label: "Contact Now",
     },
@@ -929,6 +1024,81 @@ export const servicePages: Record<string, ServicePage> = {
     ],
     cta: {
       headline: "Embracing the Startup India Advantage",
+      sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
+      label: "Contact Now",
+    },
+  },
+
+  "angel-tax-exemption": {
+    slug: "angel-tax-exemption",
+    title: "Angel Tax Exemption",
+    metaTitle: "Angel Tax Exemption | Section 56 of the Income Tax Act | AXIAFIN",
+    metaDescription:
+      "Facilitating Startup Investments. Angel Tax Exemption under Section 56 of the Income Tax Act provides relief to DPIIT-recognized startups. AXIAFIN helps you apply and qualify.",
+    eyebrow: "Registrations",
+    hero: {
+      titleLead: "Angel Tax",
+      titleAccent: "Exemption",
+      description:
+        "Facilitating Startup Investments. Tax Exemption under Section 56 of the Income Tax Act (Angel Tax). Angel Tax Exemption, governed by Section 56 of the Income Tax Act, provides relief to startups recognized by the Department for Promotion of Industry and Internal Trade (DPIIT).",
+      image: img.investor,
+    },
+    intro: {
+      heading: "What is Angel Tax Exemption?",
+      body: "This exemption shields startups from hefty tax liabilities, particularly concerning the valuation of shares issued to investors. Angel Tax Exemption empowers startups to attract essential funding without the fear of adverse tax implications, thereby facilitating their journey towards success and sustainability.",
+      image: img.startupInvest,
+    },
+    extraSections: [
+      {
+        heading: "Unlocking Growth Potential with Angel Tax Exemption",
+        body: "Angel Tax Exemption serves as a crucial lifeline for startups seeking investment. It prevents startups from facing punitive tax burdens on the excess valuation of shares issued to angel investors or through seed funding rounds. By offering this exemption, the government encourages investment in startups, fostering innovation, entrepreneurship, and economic growth.",
+        image: img.growth,
+        align: "right",
+      },
+      {
+        heading: "Benefits of Angel Tax Exemption",
+        body: "Angel Tax Exemption serves as a crucial lifeline for startups seeking investment. It prevents startups from facing punitive tax burdens on the excess valuation of shares issued to angel investors or through seed funding rounds. By offering this exemption, the government encourages investment in startups, fostering innovation, entrepreneurship, and economic growth.",
+        image: img.handshake,
+        align: "left",
+      },
+    ],
+    advantagesHeading: "Eligibility Criteria for Tax Exemption",
+    advantagesImage: img.signing,
+    advantages: [
+      {
+        icon: ShieldCheck,
+        title: "DPIIT Recognition",
+        desc: "The startup must be officially recognized by the DPIIT to qualify for Angel Tax Exemption.",
+      },
+      {
+        icon: HandCoins,
+        title: "Financial Threshold",
+        desc: "The aggregate amount of paid-up share capital and share premium of the startup, after the proposed share issuance, should not exceed INR 25 Crore.",
+      },
+      {
+        icon: Rocket,
+        title: "Lifeline for Funding",
+        desc: "Prevents startups from facing punitive tax burdens on the excess valuation of shares issued to angel investors or through seed funding rounds.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Encourages Innovation",
+        desc: "By offering this exemption, the government encourages investment in startups, fostering innovation, entrepreneurship, and economic growth.",
+      },
+    ],
+    whyChoose: {
+      heading: "Why Choose AXIAFIN for Your Angel Tax Exemption",
+      body: "Angel Tax Exemption empowers startups to attract essential funding without the fear of adverse tax implications, thereby facilitating their journey towards success and sustainability. Our team handles the entire application process — from DPIIT recognition to Section 56 declaration filing — so you can focus on building your business.",
+      image: img.team,
+    },
+    process: [
+      { step: "01", title: "DPIIT Recognition", desc: "First obtain DPIIT recognition under the Startup India program." },
+      { step: "02", title: "Threshold Check", desc: "Confirm paid-up capital + share premium does not exceed INR 25 Crore." },
+      { step: "03", title: "Declaration Filing", desc: "File the Section 56 angel-tax exemption declaration with DPIIT." },
+      { step: "04", title: "Approval & Compliance", desc: "Receive approval and stay compliant with conditions throughout the funding round." },
+    ],
+    cta: {
+      headline: "Embracing the Angel Tax Exemption",
       sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
       label: "Contact Now",
     },
@@ -1203,69 +1373,63 @@ export const servicePages: Record<string, ServicePage> = {
     },
   },
 
-  "payroll-compliance": {
-    slug: "payroll-compliance",
-    title: "ESI, EPF & PT Compliance",
-    metaTitle: "ESI & EPF Registration | Ensuring Social Security",
+  "esic-returns": {
+    slug: "esic-returns",
+    title: "ESIC Returns",
+    metaTitle: "ESIC Returns | Employees' State Insurance Compliance | AXIAFIN",
     metaDescription:
-      "ESIC, EPF, and Professional Tax registration plus monthly returns and challan management for growing teams.",
+      "Understanding ESIC Returns. The Employee State Insurance (ESI) scheme is mandated for factories and establishments employing 10+ individuals. AXIAFIN handles ESIC registration and monthly returns.",
     eyebrow: "Return Filing",
     hero: {
-      titleLead: "ESI & EPF",
-      titleAccent: "Registration & Returns",
+      titleLead: "ESIC",
+      titleAccent: "Returns",
       description:
-        "Ensuring Social Security. The Employee State Insurance (ESI) scheme is applicable to all factories and establishments with 10 or more employees earning a monthly wage below Rs. 21,000. The employer contributes 3.25%, while the employee contributes 0.75%, totaling 4%.",
-      image: img.team,
+        "Understanding ESIC Returns. The Employee State Insurance (ESI) scheme is mandated for factories and establishments outlined in the Act, provided they employ 10 or more individuals.",
+      image: img.insurance,
     },
     intro: {
-      heading: "Navigating ESIC & EPF Compliance",
-      body: "Provident Funds (PF) play a crucial role in employee savings and retirement planning. Various types of PF accounts exist: Statutory Provident Fund (governed by the Provident Funds Act, 1925 — for government employees and institutions), Recognised Provident Fund (under PF Act 1952 — for establishments with 20+ employees), Unrecognised Provident Fund (not approved by Income Tax Commissioner), Public Provident Fund (PPF — open to general public), and Employees' Provident Fund (EPF — widely adopted by private organizations).",
-      image: img.computer,
+      heading: "Understanding ESIC Returns",
+      body: "Crucially, employees earning a monthly wage below Rs 21,000 fall within the scheme's coverage. It's important to note that regardless of salary, all employees hired by the employer are considered for determining scheme applicability. The Employees' State Insurance Corporation (ESIC) is a statutory body that administers the ESIC scheme, providing social security benefits to employees in India.",
+      image: img.payroll,
     },
     extraSections: [
       {
-        heading: "Employees' Provident Fund (EPF)",
-        body: "EPF, or Employees' Provident Fund, is a well-known provident fund scheme often discussed in salary-related matters. It is widely adopted by private sector organizations employing 20 or more individuals. The rate of returns on the balance held in an individual's EPF account is contingent on the prevailing interest rate. As of March 2023, the interest rate stands at 8.15% per annum. Under the EPF scheme, both the employer and the employee make monthly contributions to the employee's account, usually in equal proportions. For individuals with a salary of ₹15,000 or lower: Employee contribution to EPF: 12% of the salary. Employer contribution to EPF: 3.67% of the salary. Employer contribution to EPS: 8.33% of the salary, limited to a maximum of ₹1,250 (ceiling amount). For individuals exceeding a salary of ₹15,000: Employer contribution to EPS: A fixed amount of ₹1,250. Additional employer contribution to EPF: The remaining amount, calculated as (8.33% of the salary) minus ₹1,250.",
-        image: img.signing,
+        heading: "Unlocking Growth Potential with ESIC Returns",
+        body: "Compliance with ESIC regulations is essential for any factory or establishment with 10 or more employees. Timely monthly ESIC contributions and returns ensure that your team has uninterrupted access to medical, sickness, maternity, and disability benefits — building trust and stability for both employer and employee.",
+        image: img.team,
         align: "right",
       },
-      {
-        heading: "Professional Tax (PT)",
-        body: "Professional Tax is a state-level tax imposed on individuals earning income from professions, trades, or employment. As per Article 246 of the Indian Constitution, states can make laws related to taxes on professions, trades, callings, and employment, under the Concurrent and State Lists. Professional tax falls within this category, as outlined in Article 276 of the Constitution. Professional tax is considered a deductible expense under the Income Tax Act, 1961. PT Rate Slabs in Telangana: Monthly salary up to Rs 15,000 — NIL; Between Rs 15,000 — Rs 20,000 — Rs 150 per month; Above Rs 20,000 — Rs 200 per month.",
-        image: img.scale,
-        align: "left",
-      },
     ],
-    advantagesHeading: "ESIC, EPF & PT Highlights",
+    advantagesHeading: "Why Choose AXIAFIN for Your ESIC Returns",
     advantagesImage: img.signing,
     advantages: [
       {
-        icon: UserCheck,
-        title: "ESIC Rates",
-        desc: "Employer Share 3.25%, Employee Share 0.75%, Total 4% (Rate after 01/07/2019).",
-      },
-      {
         icon: ShieldCheck,
-        title: "EPF Contributions",
-        desc: "Employee contribution: 12% of salary. Employer EPF: 3.67%. Employer EPS: 8.33% (capped at ₹1,250 for salaries above ₹15,000).",
+        title: "ESIC Registration Setup",
+        desc: "We obtain your establishment ESIC code and onboard all eligible employees with their respective IP numbers.",
       },
       {
-        icon: ScrollText,
-        title: "Professional Tax Slabs (Telangana)",
-        desc: "Monthly salary up to Rs 15,000: NIL. Between Rs 15,000-20,000: Rs 150/month. Above Rs 20,000: Rs 200/month.",
+        icon: UserCheck,
+        title: "Monthly Returns Filing",
+        desc: "We compute monthly contributions, generate challans, and file ESIC returns before statutory deadlines.",
       },
       {
         icon: ClipboardList,
-        title: "Tax Deductibility",
-        desc: "Professional tax is considered a deductible expense under the Income Tax Act, 1961, reducing overall tax liability.",
+        title: "Employee Lifecycle Updates",
+        desc: "Onboarding, exits, wage revisions — all reflected accurately in your ESIC filings.",
+      },
+      {
+        icon: ScrollText,
+        title: "Compliance Dashboard",
+        desc: "Centralised dashboard with all challans, return filings, and acknowledgment receipts archived for audit.",
       },
     ],
-    processHeading: "EPF Returns Formation Process",
     process: [
-      { step: "01", title: "Data Compilation", desc: "Gather information on employee wages, contributions, and other relevant details for the reporting period." },
-      { step: "02", title: "Preparation of Returns", desc: "Complete the EPF returns accurately, ensuring all required fields are filled and calculations are correct." },
-      { step: "03", title: "Submission to EPFO", desc: "File the returns electronically through the EPFO portal within the prescribed deadlines, along with the corresponding contributions." },
-      { step: "04", title: "Verification and Acknowledgment", desc: "Await verification and acknowledgment of the returns by the EPFO, confirming successful filing and compliance." },
+      { step: "01", title: "Data Compilation", desc: "Gather employee wages and contribution data for the reporting period." },
+      { step: "02", title: "Contribution Calculation", desc: "Compute Employer (3.25%) and Employee (0.75%) shares totalling 4%." },
+      { step: "03", title: "Challan Generation", desc: "Generate ESIC challan and arrange payment before the 15th of the following month." },
+      { step: "04", title: "Return Filing", desc: "File monthly ESIC return on the ESIC portal with all required attachments." },
+      { step: "05", title: "Acknowledgment Archive", desc: "Receipt of filing acknowledgment archived in your compliance portal." },
     ],
     tables: [
       {
@@ -1279,10 +1443,101 @@ export const servicePages: Record<string, ServicePage> = {
           ["Total", "4%"],
         ],
       },
+    ],
+    cta: {
+      headline: "Embracing the ESIC Returns",
+      sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
+      label: "Contact Now",
+    },
+  },
+
+  "epf-returns": {
+    slug: "epf-returns",
+    title: "EPF Returns",
+    metaTitle: "EPF Returns | Employees' Provident Fund Compliance | AXIAFIN",
+    metaDescription:
+      "The Employees' Provident Fund (EPF) is a social security scheme managed by the Employees' Provident Fund Organisation (EPFO) of India. AXIAFIN handles EPF registration and returns.",
+    eyebrow: "Return Filing",
+    hero: {
+      titleLead: "EPF",
+      titleAccent: "Returns",
+      description:
+        "The Employees' Provident Fund (EPF) is a social security scheme managed by the Employees' Provident Fund Organisation (EPFO) of India. There are various types of provident fund (PF) accounts that individuals use for savings.",
+      image: img.piggyBank,
+    },
+    intro: {
+      heading: "Types of Provident Funds",
+      body: "There are different types of provident funds utilised by a person for investment or regular savings for retirement. The income tax rules for PF contribution, withdrawal and income on PF vary depending on the type of PF account. Let us understand the various type of provident funds and their tax implications.",
+      image: img.retirement,
+    },
+    extraSections: [
+      {
+        heading: "Statutory Provident Fund",
+        body: "This scheme is set up under the Provident Funds Act, 1925. It is meant for government employees, universities, recognised educational Institutions, railways, etc. It is also known as the General Provident Fund (GPF). The interest rates of general provident funds are revised from time to time by the government. The private sector employees are not eligible for the general provident fund.",
+        image: img.govtBuilding,
+        align: "right",
+      },
+      {
+        heading: "Recognised Provident Fund",
+        body: "The Provident Fund Act, 1952 applies to all establishments employing 20 or more employees. The establishments covered under the scheme can either apply for the government-approved scheme or start a PF scheme by forming their trust. The establishments can join the government-approved scheme set up under the PF Act 1952, which is a recognised provident fund. Alternatively, the establishment's employer and employee can create a provident fund scheme by forming a trust, and funds are invested as per rules prescribed under the PF Act, 1952. The commissioner of income tax must approve the scheme to receive the status of the recognised provident fund.",
+        image: img.signing,
+        align: "left",
+      },
+      {
+        heading: "Unrecognised Provident Fund",
+        body: "If the commissioner of income tax does not approve the provident fund scheme created by the employer and employee, then such scheme is an unrecognised provident fund scheme.",
+        image: img.documents,
+        align: "right",
+      },
+      {
+        heading: "Public Provident Fund (PPF)",
+        body: "The government has established a provident fund for the general public. Any person can contribute to this scheme by opening a public provident fund account with the authorised bank. The person can deposit an amount starting from Rs.500 to Rs.1,50,000. The corpus of the PPF can be fully withdrawn after the completion of 15 years.",
+        image: img.community2,
+        align: "left",
+      },
+      {
+        heading: "Employees' Provident Fund (EPF) — In Detail",
+        body: "EPF, or Employees' Provident Fund, is a well-known provident fund scheme often discussed in salary-related matters. It is widely adopted by private sector organizations employing 20 or more individuals. The rate of returns on the balance held in an individual's EPF account is contingent on the prevailing interest rate. As of March 2023, the interest rate stands at 8.15% per annum. Under the EPF scheme, both the employer and the employee make monthly contributions to the employee's account, usually in equal proportions. The specific percentage of contributions and the corresponding accounts they are allocated to vary based on the employee's salary.",
+        image: img.payroll,
+        align: "right",
+      },
+    ],
+    advantagesHeading: "Why Choose AXIAFIN for Your EPF Returns",
+    advantagesImage: img.signing,
+    advantages: [
+      {
+        icon: ShieldCheck,
+        title: "Employer Contribution Compliance",
+        desc: "EPF returns are filings made by employers to report employee contributions, employer contributions, and other relevant details to the EPFO.",
+      },
+      {
+        icon: ClipboardList,
+        title: "Disbursement of Benefits",
+        desc: "Essential for ensuring compliance with EPF regulations and facilitating the disbursement of benefits to employees.",
+      },
+      {
+        icon: ScrollText,
+        title: "Salary-Slab Computation",
+        desc: "Accurate split between EPF (3.67%) and EPS (8.33% capped at ₹1,250) based on whether the salary is ≤ ₹15,000 or above.",
+      },
+      {
+        icon: Wallet,
+        title: "ECR Generation & Filing",
+        desc: "Monthly Electronic Challan-cum-Return (ECR) generation, contribution payment, and acknowledgment archival.",
+      },
+    ],
+    processHeading: "EPF Returns Formation Process",
+    process: [
+      { step: "01", title: "Data Compilation", desc: "Gather information on employee wages, contributions, and other relevant details for the reporting period." },
+      { step: "02", title: "Preparation of Returns", desc: "Complete the EPF returns accurately, ensuring all required fields are filled and calculations are correct." },
+      { step: "03", title: "Submission to EPFO", desc: "File the returns electronically through the EPFO portal within the prescribed deadlines, along with the corresponding contributions." },
+      { step: "04", title: "Verification and Acknowledgment", desc: "Await verification and acknowledgment of the returns by the EPFO, confirming successful filing and compliance." },
+    ],
+    tables: [
       {
         heading: "EPF Contributions — Salary ≤ ₹15,000",
         description:
-          "For individuals with a salary of ₹15,000 or lower, the EPF contributions are distributed as follows.",
+          "For individuals with a salary of ₹15,000 or lower, the EPF contributions are distributed as follows. This allocation ensures that 12% of the employee's salary goes towards the EPF, while the employer contributes 3.67% to the EPF and 8.33% (up to ₹1,250) to the EPS.",
         headers: ["Particulars", "Rate / Amount"],
         rows: [
           ["Employee contribution to EPF", "12% of the salary"],
@@ -1292,7 +1547,6 @@ export const servicePages: Record<string, ServicePage> = {
             "8.33% of the salary, limited to a maximum of ₹1,250 (ceiling amount)",
           ],
         ],
-        note: "12% of the employee's salary goes towards the EPF, while the employer contributes 3.67% to the EPF and 8.33% (up to ₹1,250) to the EPS.",
       },
       {
         heading: "EPF Contributions — Salary > ₹15,000",
@@ -1305,25 +1559,103 @@ export const servicePages: Record<string, ServicePage> = {
           ["Employer contribution to EPS", "A fixed amount of ₹1,250"],
           [
             "Additional employer contribution to EPF",
-            "Remaining amount = (8.33% of the salary) − ₹1,250",
+            "The remaining amount, calculated as (8.33% of the salary) minus ₹1,250",
           ],
         ],
         note: "Current EPF interest rate is 8.15% per annum (as of March 2023).",
       },
+    ],
+    cta: {
+      headline: "Embracing the EPF Returns Advantage",
+      sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
+      label: "Contact Now",
+    },
+  },
+
+  "pt-returns": {
+    slug: "pt-returns",
+    title: "PT Returns",
+    metaTitle: "Professional Tax (PT) Returns | State Compliance | AXIAFIN",
+    metaDescription:
+      "Professional Tax is a state-level tax imposed on individuals earning income from professions, trades, or employment. AXIAFIN provides expert PT registration and returns filing.",
+    eyebrow: "Return Filing",
+    hero: {
+      titleLead: "PT",
+      titleAccent: "Returns",
+      description:
+        "Professional Tax is a state-level tax imposed on individuals earning income from professions, trades, or employment. Professional tax is a levy imposed by state governments on various professions, trades, and employment, based on the income earned from these activities.",
+      image: img.govtBuilding,
+    },
+    intro: {
+      heading: "Understanding PT Returns",
+      body: "It applies to employees, business owners, freelancers, and professionals, among others, provided their income exceeds a specified threshold. PT returns are periodic filings required by employers to report professional tax deductions made from employee salaries and remit the collected tax to the appropriate state authority. Compliance with PT return filing obligations ensures adherence to state tax laws and avoids penalties.",
+      image: img.scale,
+    },
+    extraSections: [
+      {
+        heading: "Constitutional Framework",
+        body: "As per Article 246 of the Indian Constitution, Parliament has exclusive authority to legislate on taxes on income, included in the Union List. States, however, can make laws related to taxes on professions, trades, callings, and employment, under the Concurrent and State Lists. Professional tax falls within this category, as outlined in Article 276 of the Constitution.",
+        image: img.documents,
+        align: "right",
+      },
+      {
+        heading: "State-Level Legislation",
+        body: "Professional tax is enforced by state governments, although not all states in India choose to levy it. State governments have the authority to enact laws governing professional tax, which is considered a tax on income.",
+        image: img.govtBuilding,
+        align: "left",
+      },
+      {
+        heading: "Tax Deductibility",
+        body: "Professional tax is considered a deductible expense under the Income Tax Act, 1961. This means that the amount paid as professional tax can be deducted from the taxable income of the individual or entity, thereby reducing their overall tax liability.",
+        image: img.taxFiling,
+        align: "right",
+      },
+    ],
+    advantagesHeading: "Why Choose AXIAFIN for Your PT Returns",
+    advantagesImage: img.signing,
+    advantages: [
+      {
+        icon: Landmark,
+        title: "State Registration",
+        desc: "We obtain the Professional Tax Enrollment Certificate (PTEC) and Registration Certificate (PTRC) on your behalf.",
+      },
+      {
+        icon: ScrollText,
+        title: "Monthly Challan & Returns",
+        desc: "Monthly PT challans and periodic returns filed before the statutory deadlines for each state where you operate.",
+      },
+      {
+        icon: ClipboardList,
+        title: "Multi-State Compliance",
+        desc: "If you have employees across multiple states, we manage the differing slab structures and compliance schedules.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Audit-Ready Records",
+        desc: "Centralised archive of PT challans, returns, and acknowledgments — ready for any departmental review.",
+      },
+    ],
+    process: [
+      { step: "01", title: "PT Registration", desc: "Obtain PTEC (Enrollment Certificate) and PTRC (Registration Certificate) from state authority." },
+      { step: "02", title: "Slab Classification", desc: "Map each employee's wage to the correct PT slab for the state." },
+      { step: "03", title: "Deduction & Challan", desc: "Deduct PT from monthly payroll and generate state PT challan." },
+      { step: "04", title: "Return Filing", desc: "File periodic PT returns on the state portal with all employee-wise particulars." },
+    ],
+    tables: [
       {
         heading: "Professional Tax Rate Slabs in Telangana",
         description:
           "Telangana state Professional Tax (PT) slabs based on monthly salary or wage of the individual.",
         headers: ["Monthly Salary / Wage", "Professional Tax"],
         rows: [
-          ["Up to Rs 15,000", "NIL"],
-          ["Between Rs 15,000 – Rs 20,000", "Rs 150 per month"],
-          ["Greater than Rs 20,000", "Rs 200 per month"],
+          ["Monthly salary/wage up to Rs 15,000", "NIL"],
+          ["Monthly salary/wage between Rs 15,000 – Rs 20,000", "Rs 150 per month"],
+          ["Monthly salary/wage > Rs 20,000", "Rs 200 per month"],
         ],
       },
     ],
     cta: {
-      headline: "Embracing the ESIC, EPF & PT Returns",
+      headline: "Embracing the PT Returns Advantage",
       sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
       label: "Contact Now",
     },
@@ -1409,43 +1741,129 @@ export const servicePages: Record<string, ServicePage> = {
     },
   },
 
-  "gst-notices-refunds": {
-    slug: "gst-notices-refunds",
-    title: "GST Notices & Refunds",
-    metaTitle: "GST Notices and Refunds | Understanding and Responding Effectively",
+  "gst-notices": {
+    slug: "gst-notices",
+    title: "GST Notices",
+    metaTitle: "GST Notices | Understanding and Responding Effectively | AXIAFIN",
     metaDescription:
-      "GST notices are crucial communications from tax authorities to ensure compliance with GST regulations. GST refunds play a crucial role in ensuring fair taxation.",
+      "Understanding GST Notices and Responding Effectively. GST notices are crucial communications from tax authorities to ensure compliance with GST regulations.",
     eyebrow: "Notices & Advisory",
     hero: {
-      titleLead: "GST Notices",
-      titleAccent: "& Refunds",
+      titleLead: "GST",
+      titleAccent: "Notices",
       description:
-        "Understanding GST Notices and Responding Effectively. GST notices are crucial communications from tax authorities to ensure compliance with GST regulations. GST refunds play a crucial role in ensuring fair taxation and alleviating financial burdens on businesses and individuals.",
-      image: img.refund,
+        "Understanding GST Notices and Responding Effectively. GST notices are crucial communications from tax authorities to ensure compliance with GST regulations.",
+      image: img.notice,
     },
     intro: {
       heading: "Reasons for GST Notices",
-      body: "GST notices can be issued for various reasons, including omitted return submissions, unwarranted ITC claims, outstanding payments, and non-registration. Common triggers for notices include discrepancies between GSTR-1 and GSTR-3B, variations in ITC claims, and delays in filing returns.",
-      image: img.notice,
+      body: "GST notices can be issued for various reasons, including omitted return submissions, unwarranted ITC claims, outstanding payments, and non-registration. Common triggers for notices include discrepancies between GSTR-1 and GSTR-3B, variations in ITC claims, and delays in filing returns. Importance of notice response: common triggers for notices include discrepancies between GSTR-1 and GSTR-3B, variations in ITC claims, and delays in filing returns.",
+      image: img.email,
     },
     extraSections: [
       {
-        heading: "Key Reasons for Issuance",
-        body: "Discrepancies in GSTR-1 and GSTR-3B details may prompt scrutiny. Variances in ITC claims compared to GSTR-2B/2A can lead to notice. Continuous delay in filing returns for over six months may result in action. Discrepancies in declarations between GSTR-1 and e-way bill portal may trigger attention. Failure to adjust prices in line with revised GST rates, known as profiteering, can lead to action. Incorrect GST refund claims may result in a show-cause notice. Wrongful availing or utilization of Input Tax Credit can attract scrutiny. Discrepancies between GSTR-1 and ICEGATE information regarding exports can prompt notice.",
+        heading: "Triggers for GST Notices",
+        body: "GST notices can be issued for various reasons, including omitted return submissions, unwarranted ITC claims, outstanding payments, and non-registration. Being aware of these triggers helps you stay compliant and reduce the risk of unexpected departmental queries.",
         image: img.warning,
         align: "right",
-      },
-      {
-        heading: "Claiming GST Refunds",
-        body: "GST refund applications must be filed within 2 years from the relevant date. The concept of the 'relevant date' varies depending on the specific instance of GST refund being claimed. Understanding the various scenarios applicable for GST refunds and the process for claiming them is essential for businesses and individuals to ensure compliance with GST regulations and to alleviate financial burdens where applicable.",
-        image: img.refund,
-        align: "left",
       },
       {
         heading: "Seeking Professional Assistance",
         body: "Advise taxpayers facing complex GST notices to seek assistance from tax consultants, GST practitioners, or legal experts. Highlight the benefits of expert guidance in navigating the GST notice resolution process and ensuring compliance with GST laws.",
         image: img.team,
+        align: "left",
+      },
+    ],
+    advantagesHeading: "Key Reasons for Issuance",
+    advantagesImage: img.signing,
+    advantages: [
+      {
+        icon: FileWarning,
+        title: "GSTR-1 vs GSTR-3B Discrepancies",
+        desc: "Discrepancies in GSTR-1 and GSTR-3B details may prompt scrutiny.",
+      },
+      {
+        icon: AlertTriangle,
+        title: "ITC Variances",
+        desc: "Variances in ITC claims compared to GSTR-2B/2A can lead to notice.",
+      },
+      {
+        icon: ScrollText,
+        title: "Delayed Returns",
+        desc: "Continuous delay in filing returns for over six months may result in action.",
+      },
+      {
+        icon: ClipboardList,
+        title: "GSTR-1 vs E-Way Bill Mismatch",
+        desc: "Discrepancies in declarations between GSTR-1 and e-way bill portal may trigger attention.",
+      },
+      {
+        icon: Mail,
+        title: "Profiteering",
+        desc: "Failure to adjust prices in line with revised GST rates, known as profiteering, can lead to action.",
+      },
+      {
+        icon: Receipt,
+        title: "Incorrect Refund Claims",
+        desc: "Incorrect GST refund claims may result in a show-cause notice.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Wrongful ITC Utilization",
+        desc: "Wrongful availing or utilization of Input Tax Credit can attract scrutiny.",
+      },
+      {
+        icon: Globe,
+        title: "GSTR-1 vs ICEGATE Export Mismatch",
+        desc: "Discrepancies between GSTR-1 and ICEGATE information regarding exports can prompt notice.",
+      },
+    ],
+    processHeading: "Steps After Receiving a Notice",
+    process: [
+      { step: "01", title: "Read Notice Carefully", desc: "Carefully read the notice to understand the reason for its issuance." },
+      { step: "02", title: "Verify Accuracy", desc: "Verify the accuracy of your name, GSTIN number, and address." },
+      { step: "03", title: "Identify Discrepancies", desc: "Identify any discrepancies in your GST returns that may have triggered the notice." },
+      { step: "04", title: "Respond Promptly", desc: "Respond promptly to the notice within the specified timeframe with sufficient documentation." },
+      { step: "05", title: "Online Monitoring", desc: "Monitor GST notices online through the GST Portal for convenience and efficiency." },
+    ],
+    cta: {
+      headline: "Embracing the GST Notices",
+      sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
+      label: "Contact Now",
+    },
+  },
+
+  "gst-refunds": {
+    slug: "gst-refunds",
+    title: "GST Refunds",
+    metaTitle: "GST Refunds | Understanding GST Refunds | AXIAFIN",
+    metaDescription:
+      "GST refunds play a crucial role in ensuring fair taxation and alleviating financial burdens on businesses and individuals. AXIAFIN handles end-to-end GST refund processing.",
+    eyebrow: "Notices & Advisory",
+    hero: {
+      titleLead: "GST",
+      titleAccent: "Refunds",
+      description:
+        "Understanding GST Refunds. GST refunds play a crucial role in ensuring fair taxation and alleviating financial burdens on businesses and individuals.",
+      image: img.refundCash,
+    },
+    intro: {
+      heading: "Our GST Refund Services",
+      body: "Our digital experts, designers and developers deliver visible and valuable results. Understanding the various scenarios applicable for GST refunds and the process for claiming them is essential for businesses and individuals to ensure compliance with GST regulations and to alleviate financial burdens where applicable. By adhering to the prescribed guidelines and timelines, taxpayers can successfully claim refunds and manage their tax obligations effectively.",
+      image: img.refund,
+    },
+    extraSections: [
+      {
+        heading: "Application Deadline",
+        body: "GST refund applications must be filed within 2 years from the relevant date. The concept of the 'relevant date' varies depending on the specific instance of GST refund being claimed.",
+        image: img.documents,
         align: "right",
+      },
+      {
+        heading: "Relevant Date",
+        body: "The concept of the 'relevant date' varies depending on the specific instance of GST refund being claimed. For exports, it could be the date of export or date of receipt of FIRC; for refund of accumulated ITC, it could be the end of the financial year. Our team determines the correct relevant date and ensures the refund claim is filed well within the 2-year window.",
+        image: img.scale,
+        align: "left",
       },
     ],
     advantagesHeading: "Types of GST Refunds",
@@ -1473,7 +1891,7 @@ export const servicePages: Record<string, ServicePage> = {
       },
       {
         icon: Wallet,
-        title: "Excess Payment Refund",
+        title: "Excess Payment",
         desc: "Refund due to overpayment of GST resulting from errors or inadvertence.",
       },
       {
@@ -1492,21 +1910,29 @@ export const servicePages: Record<string, ServicePage> = {
         desc: "Refund of tax on pre-deposit if appeal is held in favor of the Assessee.",
       },
       {
+        icon: TrendingUp,
+        title: "Electronic Cash Register",
+        desc: "Refund for additional balance in the Electronic Cash Register.",
+      },
+      {
         icon: ShieldCheck,
         title: "Supplies to SEZs",
         desc: "Refund of tax levied on supplies made to Special Economic Zones (SEZs).",
       },
+      {
+        icon: AlertTriangle,
+        title: "Miscellaneous Refunds",
+        desc: "Other types of refunds as specified under GST regulations.",
+      },
     ],
-    processHeading: "Steps After Receiving a Notice",
     process: [
-      { step: "01", title: "Read Notice Carefully", desc: "Carefully read the notice to understand the reason for its issuance." },
-      { step: "02", title: "Verify Accuracy", desc: "Verify the accuracy of your name, GSTIN number, and address." },
-      { step: "03", title: "Identify Discrepancies", desc: "Identify any discrepancies in your GST returns that may have triggered the notice." },
-      { step: "04", title: "Respond Promptly", desc: "Respond promptly to the notice within the specified timeframe with sufficient documentation." },
-      { step: "05", title: "Provide Documentation", desc: "Provide sufficient information and documentation to support your response. Monitor GST notices online through the GST Portal." },
+      { step: "01", title: "Eligibility Assessment", desc: "Determine refund category and quantum based on transaction nature." },
+      { step: "02", title: "Documentation Pack", desc: "Invoice, shipping bill, FIRC, and bank realisation matched." },
+      { step: "03", title: "RFD-01 Filing", desc: "RFD-01 filed online with comprehensive annexures and statements." },
+      { step: "04", title: "Active Follow-Up", desc: "Active follow-up with the proper officer until refund order or credit." },
     ],
     cta: {
-      headline: "Embracing the GST Notices",
+      headline: "Embracing the GST Refunds",
       sub: "Take the First Step Toward Growth and Stability with AXIAFIN",
       label: "Contact Now",
     },

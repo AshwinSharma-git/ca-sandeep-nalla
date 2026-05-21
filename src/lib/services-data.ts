@@ -70,10 +70,17 @@ export const services: Service[] = [
     category: "start-business",
   },
   {
-    title: "Society & Trust",
-    desc: "Charitable and non-profit registration with 12A / 80G compliance support.",
+    title: "Society",
+    desc: "Empowering Communities. A society is an association of individuals combined using a mutual accord to deliberate, govern and act cooperatively for some communal purpose.",
     icon: Landmark,
-    href: "/services/society-trust",
+    href: "/services/society",
+    category: "start-business",
+  },
+  {
+    title: "Trust",
+    desc: "Nurturing Social Responsibility Through Trust Formation. Private, public, and charitable trust registration under the Indian Trust Act, 1882.",
+    icon: ShieldCheck,
+    href: "/services/trust",
     category: "start-business",
   },
 
@@ -151,10 +158,24 @@ export const services: Service[] = [
     category: "filing",
   },
   {
-    title: "Payroll Compliance",
-    desc: "ESIC, EPF, and Professional Tax registration plus monthly returns for growing teams.",
-    icon: ClipboardList,
-    href: "/services/payroll-compliance",
+    title: "ESIC Returns",
+    desc: "Understanding ESIC Returns. ESI scheme is mandated for factories and establishments with 10+ employees earning monthly wage below Rs 21,000. Employer 3.25% + Employee 0.75%.",
+    icon: ShieldCheck,
+    href: "/services/esic-returns",
+    category: "filing",
+  },
+  {
+    title: "EPF Returns",
+    desc: "The Employees' Provident Fund (EPF) is a social security scheme managed by the EPFO of India. Monthly contributions and ECR filings handled end-to-end.",
+    icon: HandCoins,
+    href: "/services/epf-returns",
+    category: "filing",
+  },
+  {
+    title: "PT Returns",
+    desc: "Professional Tax is a state-level tax imposed on individuals earning income from professions, trades, or employment. Multi-state PT compliance.",
+    icon: Landmark,
+    href: "/services/pt-returns",
     category: "filing",
   },
 
@@ -175,9 +196,16 @@ export const services: Service[] = [
   },
   {
     title: "Startup India / DPIIT",
-    desc: "DPIIT recognition with angel-tax exemption, tax holiday, and easy exit norms.",
+    desc: "DPIIT recognition under the Startup India program — 3-year tax holiday under Section 80IAC, IPR fast-track, and easy exit norms.",
     icon: Rocket,
     href: "/services/startup-india",
+    category: "registration",
+  },
+  {
+    title: "Angel Tax Exemption",
+    desc: "Facilitating Startup Investments. Tax Exemption under Section 56 of the Income Tax Act for DPIIT-recognized startups — shields excess share-valuation taxation.",
+    icon: Wallet,
+    href: "/services/angel-tax-exemption",
     category: "registration",
   },
   {
@@ -197,10 +225,17 @@ export const services: Service[] = [
     category: "advisory",
   },
   {
-    title: "GST Notices & Refunds",
-    desc: "ASMT-10 response, departmental audits, and fast-track export refund processing.",
+    title: "GST Notices",
+    desc: "GST notices are crucial communications from tax authorities to ensure compliance with GST regulations. ASMT-10, scrutiny, and audit notice handling.",
     icon: FileWarning,
-    href: "/services/gst-notices-refunds",
+    href: "/services/gst-notices",
+    category: "advisory",
+  },
+  {
+    title: "GST Refunds",
+    desc: "GST refunds play a crucial role in ensuring fair taxation. Zero-rated supplies, deemed exports, inverted duty structure, SEZ supplies — RFD-01 end-to-end.",
+    icon: Receipt,
+    href: "/services/gst-refunds",
     category: "advisory",
   },
   {
