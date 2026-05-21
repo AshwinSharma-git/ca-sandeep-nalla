@@ -65,7 +65,7 @@ export function Navbar() {
     >
       <nav
         aria-label="Primary"
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-20 flex justify-between items-center"
+        className="mx-auto w-full max-w-[80rem] xl:max-w-[88rem] 2xl:max-w-[96rem] 3xl:max-w-[112rem] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 h-20 flex justify-between items-center"
       >
         <Logo />
 
@@ -164,7 +164,7 @@ export function Navbar() {
             onMouseLeave={scheduleClose}
           >
             <div className="bg-white/95 backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(14,16,36,0.2)]">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+              <div className="mx-auto w-full max-w-[80rem] xl:max-w-[88rem] 2xl:max-w-[96rem] 3xl:max-w-[112rem] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-10">
                 <MegaMenuContent name={openMega} />
               </div>
               <div className="hairline" aria-hidden="true" />

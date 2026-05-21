@@ -32,7 +32,7 @@ export function FeaturedServices() {
           </LinkButton>
         </FadeIn>
 
-        <Stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 2xl:gap-12">
           {featured.map((s) => (
             <StaggerItem key={s.title}>
               <ServiceCard {...s} />

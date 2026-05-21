@@ -146,7 +146,7 @@ export function BusinessVsCompliance() {
           />
         </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 2xl:gap-14 items-start">
           {/* LEFT — Business Perspective */}
           <div className="lg:col-span-4 space-y-5 order-2 lg:order-1">
             <div className="text-center lg:text-right">
@@ -182,7 +182,7 @@ export function BusinessVsCompliance() {
 
           {/* CENTER — Chart */}
           <div className="lg:col-span-4 order-1 lg:order-2 flex justify-center">
-            <div className="relative w-full max-w-[28rem]">
+            <div className="relative w-full max-w-[26rem] xl:max-w-[28rem] 2xl:max-w-[32rem]">
               <svg
                 viewBox="0 0 600 600"
                 role="img"

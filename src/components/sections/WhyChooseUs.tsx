@@ -30,7 +30,7 @@ export function WhyChooseUs() {
           />
         </FadeIn>
 
-        <Stagger className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <Stagger className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12">
           {valueProps.map((vp, idx) => {
             const isFeature = idx === 1;
             return (

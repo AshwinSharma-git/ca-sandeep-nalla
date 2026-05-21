@@ -34,7 +34,7 @@ export function Hero() {
         }}
       />
 
-      <Container className="relative z-10 py-28 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <Container className="relative z-10 py-28 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 2xl:gap-24 items-center">
         <FadeIn direction="right" className="space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo/20 bg-white/70 backdrop-blur shadow-sm">
             <Sparkles className="w-4 h-4 text-indigo" aria-hidden="true" />

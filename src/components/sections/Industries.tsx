@@ -18,7 +18,7 @@ export function Industries() {
           />
         </FadeIn>
 
-        <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 2xl:gap-10">
           {industries.map((ind) => (
             <StaggerItem key={ind.title}>
               <article className="group h-full bg-mist p-8 rounded-2xl border border-lime/10 hover:bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
