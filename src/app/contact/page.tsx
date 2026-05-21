@@ -17,7 +17,7 @@ import { offices, siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach AXIAFIN — offices in Kothapet and HITEC City, Hyderabad. Call 089776 08216 or book a free consultation online.",
+    "Reach AXIAFIN — offices in Kothapet and HITEC City, Hyderabad. Call 089776 08216 or book an appointment online.",
   alternates: { canonical: "/contact" },
 };
 

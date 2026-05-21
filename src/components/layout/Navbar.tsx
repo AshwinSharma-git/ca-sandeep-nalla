@@ -4,10 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { Menu, X, ChevronDown, PhoneCall, ArrowUpRight } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navLinks } from "@/lib/nav-links";
-import { siteConfig } from "@/lib/site-config";
 import { Logo } from "./Logo";
 
 export function Navbar() {
@@ -65,7 +64,7 @@ export function Navbar() {
     >
       <nav
         aria-label="Primary"
-        className="mx-auto w-full max-w-[80rem] xl:max-w-[88rem] 2xl:max-w-[96rem] 3xl:max-w-[112rem] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 h-20 flex justify-between items-center"
+        className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 3xl:px-14 h-20 flex justify-between items-center"
       >
         <Logo />
 
@@ -118,19 +117,12 @@ export function Navbar() {
           })}
         </ul>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <a
-            href={`tel:${siteConfig.contact.phoneE164}`}
-            className="hidden xl:flex items-center gap-2 text-sm font-medium text-ink hover:text-indigo transition-colors"
-          >
-            <PhoneCall className="w-4 h-4 text-indigo" aria-hidden="true" />
-            {siteConfig.contact.phone}
-          </a>
+        <div className="hidden lg:flex items-center">
           <Link
             href="/contact"
             className="group px-5 py-2.5 text-sm font-semibold bg-indigo text-white rounded-xl hover:bg-indigo-deep transition-all shadow-[0_8px_24px_-10px_rgba(61,67,201,0.55)] hover:shadow-[0_12px_30px_-10px_rgba(61,67,201,0.6)] hover:-translate-y-0.5 inline-flex items-center gap-2"
           >
-            Free Consultation
+            Book Appointment
             <ArrowUpRight
               className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               aria-hidden="true"
@@ -164,7 +156,7 @@ export function Navbar() {
             onMouseLeave={scheduleClose}
           >
             <div className="bg-white/95 backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(14,16,36,0.2)]">
-              <div className="mx-auto w-full max-w-[80rem] xl:max-w-[88rem] 2xl:max-w-[96rem] 3xl:max-w-[112rem] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-10">
+              <div className="mx-auto w-full max-w-[80rem] xl:max-w-[90rem] 2xl:max-w-[104rem] 3xl:max-w-[116rem] 4xl:max-w-[132rem] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 3xl:px-14 py-10">
                 <MegaMenuContent name={openMega} />
               </div>
               <div className="hairline" aria-hidden="true" />
@@ -188,22 +180,12 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <MobileNavItem key={link.name} link={link} />
               ))}
-              <div className="pt-4 space-y-3">
-                <a
-                  href={`tel:${siteConfig.contact.phoneE164}`}
-                  className="flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold text-ink border border-ink/15 rounded-xl"
-                >
-                  <PhoneCall
-                    className="w-4 h-4 text-indigo"
-                    aria-hidden="true"
-                  />
-                  {siteConfig.contact.phone}
-                </a>
+              <div className="pt-4">
                 <Link
                   href="/contact"
                   className="block w-full py-3 text-sm font-semibold bg-indigo text-white text-center rounded-xl shadow-[0_8px_24px_-10px_rgba(61,67,201,0.55)]"
                 >
-                  Free Consultation
+                  Book Appointment
                 </Link>
               </div>
             </div>

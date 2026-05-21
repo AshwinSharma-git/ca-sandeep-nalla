@@ -4,8 +4,9 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-playfair), ui-serif, Georgia, serif;
 
-  /* Custom breakpoint for ultra-wide displays */
-  --breakpoint-3xl: 1920px;
+  /* Custom breakpoints for ultra-wide displays */
+  --breakpoint-3xl: 1700px;
+  --breakpoint-4xl: 2200px;
 
   /* Brand */
   --color-indigo: #3d43c9;

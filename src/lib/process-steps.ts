@@ -8,7 +8,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: "01",
     title: "Discovery Call",
-    desc: "A free 30-minute consult to understand your business, current compliance status, and immediate priorities.",
+    desc: "A 30-minute consult to understand your business, current compliance status, and immediate priorities.",
   },
   {
     step: "02",

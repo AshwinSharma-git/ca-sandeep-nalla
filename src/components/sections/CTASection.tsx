@@ -12,7 +12,7 @@ type Props = {
 export function CTASection({
   title,
   description,
-  ctaLabel = "Book Free Consultation",
+  ctaLabel = "Book Appointment",
   ctaHref = "/contact",
 }: Props) {
   return (

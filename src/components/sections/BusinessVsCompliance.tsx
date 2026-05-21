@@ -182,7 +182,7 @@ export function BusinessVsCompliance() {
 
           {/* CENTER — Chart */}
           <div className="lg:col-span-4 order-1 lg:order-2 flex justify-center">
-            <div className="relative w-full max-w-[26rem] xl:max-w-[28rem] 2xl:max-w-[32rem]">
+            <div className="relative w-full max-w-[26rem] xl:max-w-[28rem] 2xl:max-w-[32rem] 3xl:max-w-[36rem]">
               <svg
                 viewBox="0 0 600 600"
                 role="img"

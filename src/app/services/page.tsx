@@ -85,8 +85,8 @@ export default function ServicesPage() {
             <span className="text-lime italic font-medium">Start</span>?
           </>
         }
-        description="Book a free 30-minute consultation with a senior partner — we'll map exactly what your business needs next."
-        ctaLabel="Book Free Consultation"
+        description="Book a 30-minute consultation with a senior partner — we'll map exactly what your business needs next."
+        ctaLabel="Book Appointment"
         ctaHref="/contact"
       />
     </>
