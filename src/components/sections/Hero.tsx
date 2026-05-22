@@ -99,13 +99,13 @@ export function Hero() {
             className="absolute -top-8 -right-6 w-40 h-40 rounded-3xl indigo-gradient rotate-6 shadow-[0_30px_60px_-20px_rgba(61,67,201,0.5)]"
           />
           <div className="relative glass-card rounded-3xl p-6 luxury-shadow">
-            <div className="relative rounded-2xl overflow-hidden mb-6 aspect-[3/4]">
+            <div className="relative rounded-2xl overflow-hidden mb-6 aspect-[4/3]">
               <Image
-                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1740"
-                alt="AXIAFIN Chartered Accountants — strategic financial review"
+                src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&q=80&w=1740"
+                alt="Income tax book, calculator and financial documents on a CA's desk"
                 fill
                 priority
-                sizes="(min-width: 768px) 40vw, 100vw"
+                sizes="(min-width: 768px) 45vw, 100vw"
                 className="object-cover"
               />
               <div className="absolute inset-x-3 bottom-3 rounded-xl bg-white/85 backdrop-blur-md px-4 py-3 flex items-center gap-3 border border-white/60 shadow-sm">
