@@ -146,9 +146,9 @@ export function BusinessVsCompliance() {
           />
         </FadeIn>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 2xl:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 2xl:gap-10 items-center">
           {/* LEFT — Business Perspective */}
-          <div className="lg:col-span-4 space-y-5 order-2 lg:order-1">
+          <div className="lg:col-span-4 xl:col-span-3 space-y-5 order-2 lg:order-1">
             <div className="text-center lg:text-right">
               <span className="inline-block underline decoration-2 underline-offset-4 decoration-indigo/60 font-display text-2xl md:text-3xl text-indigo font-bold">
                 Business Perspective
@@ -159,12 +159,18 @@ export function BusinessVsCompliance() {
               .map((s) => (
                 <article
                   key={s.title}
-                  className="bg-pearl/60 backdrop-blur p-5 rounded-2xl border border-ink/5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+                  className="relative bg-pearl/60 backdrop-blur p-5 rounded-2xl border border-ink/5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
                 >
+                  {/* Dashed connector extending RIGHT toward the chart, color-matched to the corresponding sector */}
+                  <span
+                    aria-hidden="true"
+                    className="hidden lg:block absolute left-full top-1/2 -translate-y-1/2 w-14 lg:w-16 xl:w-24 2xl:w-32 3xl:w-40 border-t-[3px] border-dashed z-10"
+                    style={{ borderColor: s.color }}
+                  />
                   <div className="flex items-start gap-3">
                     <span
                       aria-hidden="true"
-                      className="w-3 h-3 rounded-full mt-1.5 shrink-0"
+                      className="w-3 h-3 rounded-full mt-1.5 shrink-0 ring-2 ring-white shadow-sm"
                       style={{ backgroundColor: s.color }}
                     />
                     <div>
@@ -180,9 +186,9 @@ export function BusinessVsCompliance() {
               ))}
           </div>
 
-          {/* CENTER — Chart */}
-          <div className="lg:col-span-4 order-1 lg:order-2 flex justify-center">
-            <div className="relative w-full max-w-[26rem] xl:max-w-[28rem] 2xl:max-w-[32rem] 3xl:max-w-[36rem]">
+          {/* CENTER — Chart (larger on xl+ via col-span-6) */}
+          <div className="lg:col-span-4 xl:col-span-6 order-1 lg:order-2 flex justify-center">
+            <div className="relative w-full max-w-[26rem] sm:max-w-[30rem] lg:max-w-[34rem] xl:max-w-[44rem] 2xl:max-w-[52rem] 3xl:max-w-[60rem]">
               <svg
                 viewBox="0 0 600 600"
                 role="img"
@@ -273,7 +279,7 @@ export function BusinessVsCompliance() {
           </div>
 
           {/* RIGHT — Compliance Perspective */}
-          <div className="lg:col-span-4 space-y-5 order-3">
+          <div className="lg:col-span-4 xl:col-span-3 space-y-5 order-3">
             <div className="text-center lg:text-left">
               <span className="inline-block underline decoration-2 underline-offset-4 decoration-lime-deep/60 font-display text-2xl md:text-3xl text-lime-deep font-bold">
                 Compliance Perspective
@@ -284,12 +290,18 @@ export function BusinessVsCompliance() {
               .map((s) => (
                 <article
                   key={s.title}
-                  className="bg-pearl/60 backdrop-blur p-5 rounded-2xl border border-ink/5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+                  className="relative bg-pearl/60 backdrop-blur p-5 rounded-2xl border border-ink/5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
                 >
+                  {/* Dashed connector extending LEFT toward the chart, color-matched to the corresponding sector */}
+                  <span
+                    aria-hidden="true"
+                    className="hidden lg:block absolute right-full top-1/2 -translate-y-1/2 w-14 lg:w-16 xl:w-24 2xl:w-32 3xl:w-40 border-t-[3px] border-dashed z-10"
+                    style={{ borderColor: s.color }}
+                  />
                   <div className="flex items-start gap-3">
                     <span
                       aria-hidden="true"
-                      className="w-3 h-3 rounded-full mt-1.5 shrink-0"
+                      className="w-3 h-3 rounded-full mt-1.5 shrink-0 ring-2 ring-white shadow-sm"
                       style={{ backgroundColor: s.color }}
                     />
                     <div>
