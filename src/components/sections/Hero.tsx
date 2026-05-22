@@ -43,7 +43,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-ink leading-[1.02] font-bold text-balance">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ink leading-[1.05] md:leading-[1.02] font-bold text-balance">
             Empowering Your{" "}
             <span className="text-gradient-brand italic font-medium">
               Financial Compliance
@@ -91,7 +91,7 @@ export function Hero() {
         <FadeIn
           direction="left"
           delay={0.15}
-          className="hidden md:block relative"
+          className="relative mt-4 md:mt-0"
         >
           {/* Floating decorative card behind */}
           <div

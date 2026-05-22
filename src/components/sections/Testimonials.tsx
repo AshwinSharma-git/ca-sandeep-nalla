@@ -42,7 +42,7 @@ export function Testimonials() {
           {testimonials.map((t) => (
             <StaggerItem key={t.name}>
               <HoverLift>
-                <figure className="p-10 rounded-2xl bg-pearl shadow-lg border-b-4 border-lime/30 hover:border-lime transition-all h-full flex flex-col">
+                <figure className="p-6 sm:p-8 lg:p-10 rounded-2xl bg-pearl shadow-lg border-b-4 border-lime/30 hover:border-lime transition-all h-full flex flex-col">
                   <blockquote className="text-ink italic text-lg leading-relaxed mb-10 flex-1">
                     &ldquo;{t.text}&rdquo;
                   </blockquote>

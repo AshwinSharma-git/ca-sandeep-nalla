@@ -10,10 +10,10 @@ type Props = {
 
 export function ServiceCard({ title, desc, icon: Icon, href }: Props) {
   return (
-    <article className="group bg-white p-8 md:p-10 rounded-2xl border border-lime/10 shadow-lg flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full">
+    <article className="group bg-white p-6 sm:p-7 md:p-8 lg:p-10 rounded-2xl border border-lime/10 shadow-lg flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full">
       <div>
-        <div className="w-16 h-16 rounded-2xl bg-ink flex items-center justify-center text-lime-soft mb-8 group-hover:scale-110 transition-transform shadow-lg">
-          <Icon className="w-8 h-8" aria-hidden="true" />
+        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-ink flex items-center justify-center text-lime-soft mb-6 sm:mb-8 group-hover:scale-110 transition-transform shadow-lg">
+          <Icon className="w-7 h-7 sm:w-8 sm:h-8" aria-hidden="true" />
         </div>
         <div
           aria-hidden="true"

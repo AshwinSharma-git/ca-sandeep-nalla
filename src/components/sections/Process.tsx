@@ -47,7 +47,7 @@ export function Process() {
           />
           {processSteps.map((step, i) => (
             <StaggerItem key={step.step}>
-              <article className="group relative h-full p-8 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm hover:bg-white/[0.07] hover:border-lime/40 transition-all duration-500">
+              <article className="group relative h-full p-6 sm:p-7 lg:p-8 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm hover:bg-white/[0.07] hover:border-lime/40 transition-all duration-500">
                 <div className="flex items-baseline gap-3 mb-6">
                   <span className="font-display text-5xl text-gradient-brand font-bold leading-none">
                     {step.step}

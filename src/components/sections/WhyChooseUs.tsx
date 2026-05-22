@@ -37,7 +37,7 @@ export function WhyChooseUs() {
               <StaggerItem key={vp.title}>
                 <article
                   className={cn(
-                    "group relative h-full rounded-3xl p-10 transition-all duration-500 overflow-hidden",
+                    "group relative h-full rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-500 overflow-hidden",
                     isFeature
                       ? "ink-gradient text-white shadow-[0_30px_80px_-30px_rgba(14,16,36,0.5)] hover:-translate-y-2"
                       : "bg-white border border-ink/5 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-indigo/20",

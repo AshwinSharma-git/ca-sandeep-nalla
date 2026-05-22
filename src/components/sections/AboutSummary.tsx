@@ -41,11 +41,11 @@ export function AboutSummary() {
                 className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent"
               />
             </div>
-            <div className="absolute -bottom-10 -right-4 sm:-right-10 bg-white p-8 sm:p-10 rounded-2xl luxury-shadow border border-ink/5 max-w-[300px]">
-              <p className="font-display text-4xl sm:text-5xl text-gradient-brand font-bold leading-none mb-3">
+            <div className="absolute -bottom-6 sm:-bottom-10 right-2 sm:-right-10 bg-white p-5 sm:p-8 lg:p-10 rounded-2xl luxury-shadow border border-ink/5 max-w-[220px] sm:max-w-[280px] lg:max-w-[300px]">
+              <p className="font-display text-2xl sm:text-4xl lg:text-5xl text-gradient-brand font-bold leading-none mb-2 sm:mb-3">
                 Build Your Business
               </p>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate leading-snug">
+              <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-slate leading-snug">
                 With a partner who has your back
               </p>
             </div>
