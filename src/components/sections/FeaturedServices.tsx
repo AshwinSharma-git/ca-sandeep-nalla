@@ -7,19 +7,19 @@ import { services } from "@/lib/services-data";
 import { LinkButton } from "@/components/ui/Button";
 
 const featuredTitles = new Set([
+  "Virtual CFO Services",
+  "International Taxation",
+  "Assessment, CIT Appeal & ITAT Representation",
   "Private Limited Company",
   "GST Registration",
-  "Statutory Audit",
   "Income Tax Filing",
-  "ROC Filings",
-  "MSME / Udyam",
 ]);
 
 export function FeaturedServices() {
   const featured = services.filter((s) => featuredTitles.has(s.title));
 
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <Container>
         <FadeIn className="flex flex-col md:flex-row md:justify-between md:items-end gap-8 mb-16">
           <SectionHeading

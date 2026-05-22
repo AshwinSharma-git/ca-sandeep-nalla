@@ -202,7 +202,7 @@ export function Footer() {
 
         <div className="mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 uppercase tracking-wider">
           <p>
-            © {year} {siteConfig.name} — All Rights Reserved.
+            © {year} {siteConfig.legalName} ({siteConfig.name}) — All Rights Reserved.
           </p>
           <ul className="flex flex-wrap gap-6 md:gap-8 justify-center">
             {legalLinks.map((l) => (

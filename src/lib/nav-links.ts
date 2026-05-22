@@ -32,14 +32,11 @@ const servicesGroups: NavGroup[] = [
     ],
   },
   {
-    heading: "Audit & Assurance",
+    heading: "Consultancy Services",
     items: [
-      { name: "Statutory Audit", href: "/services/statutory-audit" },
-      { name: "Income Tax Audit", href: "/services/income-tax-audit" },
-      { name: "GST Audit", href: "/services/gst-audit" },
-      { name: "Internal Audit", href: "/services/internal-audit" },
-      { name: "Revenue Audit", href: "/services/revenue-audit" },
-      { name: "Stock Audit", href: "/services/stock-audit" },
+      { name: "Virtual CFO Services", href: "/services/virtual-cfo" },
+      { name: "International Taxation", href: "/services/international-taxation" },
+      { name: "Assessment, CIT Appeal & ITAT", href: "/services/tax-assessment-appeals" },
     ],
   },
   {
@@ -68,10 +65,10 @@ const servicesGroups: NavGroup[] = [
   {
     heading: "Other Services",
     items: [
-      { name: "Income Tax Notices", href: "/services/income-tax-notices" },
-      { name: "GST Notices", href: "/services/gst-notices" },
       { name: "GST Refunds", href: "/services/gst-refunds" },
       { name: "Project Reports", href: "/services/project-reports" },
+      { name: "Income Tax Notices", href: "/services/income-tax-notices" },
+      { name: "GST Notices", href: "/services/gst-notices" },
     ],
   },
 ];

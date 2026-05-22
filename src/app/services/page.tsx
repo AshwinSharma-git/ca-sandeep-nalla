@@ -12,7 +12,7 @@ import { services, categoryLabel } from "@/lib/services-data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "End-to-end Chartered Accountancy services — company registration, GST, audit, ITR filing, MSME, Startup India, ROC compliance, and notice handling.",
+    "End-to-end Chartered Accountancy services — Virtual CFO, International Taxation, GST, ITR filing, company registration, MSME, Startup India, ROC compliance, and legal representation.",
   alternates: { canonical: "/services" },
 };
 
@@ -24,10 +24,10 @@ const stats = [
 
 const categoryOrder: (keyof typeof categoryLabel)[] = [
   "start-business",
+  "consultancy",
   "filing",
-  "audit",
   "registration",
-  "advisory",
+  "other",
 ];
 
 export default function ServicesPage() {
@@ -86,7 +86,7 @@ export default function ServicesPage() {
           </>
         }
         description="Book a 30-minute consultation with a senior partner — we'll map exactly what your business needs next."
-        ctaLabel="Book Appointment"
+        ctaLabel="Book Consultation"
         ctaHref="/contact"
       />
     </>

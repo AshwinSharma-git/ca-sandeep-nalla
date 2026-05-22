@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         destination: "/services/gst-notices",
         permanent: true,
       },
+      // Audit section removed — replaced with Consultancy Services
+      {
+        source: "/services/audit",
+        destination: "/services",
+        permanent: true,
+      },
     ];
   },
 };

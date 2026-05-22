@@ -35,7 +35,7 @@ export function FAQ({
   };
 
   return (
-    <section className="py-24 md:py-32 bg-mist">
+    <section className="py-16 md:py-20 bg-mist">
       <Container className="max-w-4xl">
         <FadeIn className="mb-12 md:mb-16">
           <SectionHeading

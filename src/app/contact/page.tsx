@@ -46,7 +46,7 @@ export default function ContactPage() {
             respond the same business day.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
             <a
               href={`tel:${siteConfig.contact.phoneE164}`}
               className="group p-5 bg-white rounded-xl border border-lime/10 shadow-sm flex items-center gap-4 hover:shadow-xl hover:-translate-y-0.5 transition-all"
@@ -60,6 +60,27 @@ export default function ContactPage() {
                 </p>
                 <p className="text-sm font-bold text-ink group-hover:text-lime transition-colors">
                   {siteConfig.contact.phoneDisplay}
+                </p>
+              </div>
+            </a>
+            <a
+              href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^\d]/g, "")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-5 bg-white rounded-xl border border-lime/10 shadow-sm flex items-center gap-4 hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            >
+              <div className="w-11 h-11 bg-green-500/10 rounded-xl flex items-center justify-center">
+                <MessageCircle
+                  className="w-5 h-5 text-green-600"
+                  aria-hidden="true"
+                />
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-gray-400">
+                  WhatsApp
+                </p>
+                <p className="text-sm font-bold text-ink group-hover:text-green-600 transition-colors">
+                  {siteConfig.contact.whatsappDisplay}
                 </p>
               </div>
             </a>

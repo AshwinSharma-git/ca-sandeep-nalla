@@ -12,11 +12,11 @@ type Props = {
 export function CTASection({
   title,
   description,
-  ctaLabel = "Book Appointment",
+  ctaLabel = "Book Consultation",
   ctaHref = "/contact",
 }: Props) {
   return (
-    <section className="py-24">
+    <section className="py-16 md:py-20">
       <Container>
         <div className="relative ink-gradient rounded-[2rem] md:rounded-[3rem] p-12 md:p-20 lg:p-24 overflow-hidden text-center shadow-[0_40px_120px_-30px_rgba(14,16,36,0.5)]">
           <div className="absolute inset-0 grid-texture opacity-40" aria-hidden="true" />

@@ -6,7 +6,7 @@ import { processSteps } from "@/lib/process-steps";
 
 export function Process() {
   return (
-    <section className="relative ink-gradient text-white py-24 md:py-32 overflow-hidden">
+    <section className="relative ink-gradient text-white py-16 md:py-20 overflow-hidden">
       <div className="absolute inset-0 grid-texture opacity-60" aria-hidden="true" />
       <div
         aria-hidden="true"

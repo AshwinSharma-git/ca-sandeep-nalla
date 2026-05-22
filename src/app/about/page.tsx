@@ -251,7 +251,7 @@ export default function AboutPage() {
             corporate restructurings in the region.
           </p>
           <LinkButton href="/contact" variant="lime" size="lg" className="uppercase tracking-[0.2em] text-xs">
-            Book Appointment
+            Book Consultation
           </LinkButton>
         </Container>
       </section>

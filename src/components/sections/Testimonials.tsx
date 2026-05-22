@@ -6,7 +6,7 @@ import { testimonials } from "@/lib/services-data";
 
 export function Testimonials() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-16 md:mb-20">
           <div className="max-w-xl space-y-4">
@@ -38,7 +38,7 @@ export function Testimonials() {
           </div>
         </div>
 
-        <Stagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {testimonials.map((t) => (
             <StaggerItem key={t.name}>
               <HoverLift>

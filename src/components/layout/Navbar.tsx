@@ -122,7 +122,7 @@ export function Navbar() {
             href="/contact"
             className="group px-5 py-2.5 text-sm font-semibold bg-indigo text-white rounded-xl hover:bg-indigo-deep transition-all shadow-[0_8px_24px_-10px_rgba(61,67,201,0.55)] hover:shadow-[0_12px_30px_-10px_rgba(61,67,201,0.6)] hover:-translate-y-0.5 inline-flex items-center gap-2"
           >
-            Book Appointment
+            Book Consultation
             <ArrowUpRight
               className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               aria-hidden="true"
@@ -185,7 +185,7 @@ export function Navbar() {
                   href="/contact"
                   className="block w-full py-3 text-sm font-semibold bg-indigo text-white text-center rounded-xl shadow-[0_8px_24px_-10px_rgba(61,67,201,0.55)]"
                 >
-                  Book Appointment
+                  Book Consultation
                 </Link>
               </div>
             </div>

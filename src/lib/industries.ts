@@ -3,6 +3,7 @@ import {
   Award,
   Building2,
   User,
+  Landmark,
   type LucideIcon,
 } from "lucide-react";
 
@@ -22,6 +23,16 @@ export const industries: Industry[] = [
       "Domain-led strategic advisory",
       "Senior CA-led engagements",
       "Industry-specific solutions",
+    ],
+  },
+  {
+    icon: Landmark,
+    title: "For Business Organisations",
+    desc: "Comprehensive services tailored for established business organisations — strategic CFO leadership, cross-border tax planning, and legal representation under one roof.",
+    points: [
+      "Virtual CFO Services",
+      "Tax Planning & International Taxation",
+      "Legal Services & Representation",
     ],
   },
   {

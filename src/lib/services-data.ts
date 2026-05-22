@@ -26,10 +26,10 @@ export type Service = {
   href: string;
   category:
     | "start-business"
-    | "audit"
+    | "consultancy"
     | "filing"
     | "registration"
-    | "advisory";
+    | "other";
 };
 
 export const services: Service[] = [
@@ -84,48 +84,27 @@ export const services: Service[] = [
     category: "start-business",
   },
 
-  // Audit & Assurance
+  // Consultancy Services
   {
-    title: "Statutory Audit",
-    desc: "A legally mandated review of a company's financial statements to verify accuracy and compliance under the Companies Act, 2013.",
-    icon: ShieldCheck,
-    href: "/services/statutory-audit",
-    category: "audit",
+    title: "Virtual CFO Services",
+    desc: "Strategic financial leadership on-demand — MIS, budgeting, cash-flow management, fundraising support, and board advisory without the full-time CFO cost.",
+    icon: Briefcase,
+    href: "/services/virtual-cfo",
+    category: "consultancy",
   },
   {
-    title: "Income Tax Audit",
-    desc: "Comprehensive Income Tax Audits under Section 44AB for businesses and professionals — including Form 3CA/3CB/3CD preparation.",
-    icon: FileText,
-    href: "/services/income-tax-audit",
-    category: "audit",
+    title: "International Taxation",
+    desc: "DTAA advisory and PT (Permanent Establishment) audit. Cross-border tax optimisation, transfer pricing, NRI taxation, and foreign-asset reporting.",
+    icon: Globe,
+    href: "/services/international-taxation",
+    category: "consultancy",
   },
   {
-    title: "GST Audit",
-    desc: "GSTR-9C annual reconciliation and GST audit for businesses with aggregate turnover exceeding ₹5 crore.",
-    icon: Receipt,
-    href: "/services/gst-audit",
-    category: "audit",
-  },
-  {
-    title: "Internal Audit",
-    desc: "Independent and objective evaluation of internal controls, compliance systems, and operational processes.",
-    icon: ClipboardList,
-    href: "/services/internal-audit",
-    category: "audit",
-  },
-  {
-    title: "Revenue Audit",
-    desc: "Optimizing financial compliance through detailed revenue recognition testing — occurrence, completeness, accuracy, and cut-off.",
-    icon: ShieldCheck,
-    href: "/services/revenue-audit",
-    category: "audit",
-  },
-  {
-    title: "Stock Audit",
-    desc: "Inventory audit ensuring accuracy of physical goods against stock register — vital for transparency, compliance, and efficient inventory management.",
-    icon: Factory,
-    href: "/services/stock-audit",
-    category: "audit",
+    title: "Assessment, CIT Appeal & ITAT Representation",
+    desc: "End-to-end representation in income-tax assessments, faceless scrutiny, CIT(Appeals), and Income Tax Appellate Tribunal — senior CA-led at every hearing.",
+    icon: Scale,
+    href: "/services/tax-assessment-appeals",
+    category: "consultancy",
   },
 
   // Return Filing
@@ -222,37 +201,37 @@ export const services: Service[] = [
     desc: "Drafting, representation, and resolution for Section 143, 148, and 245 notices.",
     icon: Mail,
     href: "/services/income-tax-notices",
-    category: "advisory",
+    category: "other",
   },
   {
     title: "GST Notices",
     desc: "GST notices are crucial communications from tax authorities to ensure compliance with GST regulations. ASMT-10, scrutiny, and audit notice handling.",
     icon: FileWarning,
     href: "/services/gst-notices",
-    category: "advisory",
+    category: "other",
   },
   {
     title: "GST Refunds",
     desc: "GST refunds play a crucial role in ensuring fair taxation. Zero-rated supplies, deemed exports, inverted duty structure, SEZ supplies — RFD-01 end-to-end.",
     icon: Receipt,
     href: "/services/gst-refunds",
-    category: "advisory",
+    category: "other",
   },
   {
     title: "Project Reports",
     desc: "Bankable project reports, CMA data, and financial projections for loans and grants.",
     icon: ClipboardList,
     href: "/services/project-reports",
-    category: "advisory",
+    category: "other",
   },
 ];
 
 export const categoryLabel: Record<Service["category"], string> = {
   "start-business": "Start a Business",
-  audit: "Audit & Assurance",
+  consultancy: "Consultancy Services",
   filing: "Return Filing",
   registration: "Registrations",
-  advisory: "Notices & Advisory",
+  other: "Other Services",
 };
 
 export type Testimonial = {
@@ -266,19 +245,25 @@ export const testimonials: Testimonial[] = [
   {
     text: "AXIAFIN set up our Private Limited Company in days — DSC, DIN, MOA, GST, and even our current account. Genuinely the fastest CA experience I've had.",
     name: "Rajesh Varma",
-    role: "Founder, TechFlow Systems",
+    role: "Founder",
     initials: "RV",
   },
   {
     text: "We switched our GST compliance to AXIAFIN last year. Zero notices, perfectly reconciled ITC, and they actually respond when you call.",
     name: "Ananya Kapoor",
-    role: "Director, Radiant Exports",
+    role: "Director",
     initials: "AK",
+  },
+  {
+    text: "Their DTAA advisory was a game-changer for our cross-border operations. They mapped our India–Singapore treaty benefits precisely and handled the Permanent Establishment (PE) audit flawlessly — significant savings on our overseas tax exposure.",
+    name: "Vikram Iyer",
+    role: "International Tax Consultant",
+    initials: "VI",
   },
   {
     text: "They understand the startup ecosystem deeply — DPIIT recognition, angel-tax exemption, ESOP structuring. Worth every rupee.",
     name: "Siddharth Mehta",
-    role: "Founder, Nexus AI",
+    role: "Founder",
     initials: "SM",
   },
 ];

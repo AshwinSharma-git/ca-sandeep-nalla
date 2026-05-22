@@ -20,7 +20,7 @@ export const valueProps: ValueProp[] = [
     bullets: [
       "Strategic deductions & exemptions",
       "Capital gains structuring",
-      "Quarterly advance-tax planning",
+      "Tax Planning for International Taxation",
     ],
   },
   {

@@ -128,7 +128,7 @@ const wheelOrder = [
 
 export function BusinessVsCompliance() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <Container>
         <FadeIn className="mb-16">
           <SectionHeading

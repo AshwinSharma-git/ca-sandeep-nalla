@@ -2056,6 +2056,276 @@ export const servicePages: Record<string, ServicePage> = {
   },
 
   // ============================================================
+  // CONSULTANCY SERVICES — Virtual CFO, International Tax, Appeals
+  // ============================================================
+  "virtual-cfo": {
+    slug: "virtual-cfo",
+    title: "Virtual CFO Services",
+    metaTitle: "Virtual CFO Services in Hyderabad | AXIAFIN",
+    metaDescription:
+      "Strategic financial leadership on demand. AXIAFIN's Virtual CFO services give startups and SMEs senior CA-led financial planning, MIS, fundraising support, and board advisory without the full-time cost.",
+    eyebrow: "Consultancy Services",
+    hero: {
+      titleLead: "Virtual CFO",
+      titleAccent: "Services",
+      description:
+        "Strategic Financial Leadership On-Demand. AXIAFIN's Virtual CFO services give growing businesses senior CA-led financial leadership — strategy, planning, MIS, treasury, fundraising, and board advisory — without the cost of a full-time CFO.",
+      image: img.team,
+    },
+    intro: {
+      heading: "What is a Virtual CFO?",
+      body: "A Virtual CFO is an outsourced senior finance executive who provides strategic financial leadership to a business on a part-time, fractional, or retainer basis. Instead of hiring a full-time CFO costing ₹40–80 lakhs annually, businesses get the same expertise — financial planning, MIS, cash-flow management, investor reporting, and board advisory — at a fraction of the cost. At AXIAFIN, our Virtual CFO engagements are led by senior Chartered Accountants with decades of industry experience.",
+      image: img.boardroom,
+    },
+    extraSections: [
+      {
+        heading: "Who Needs a Virtual CFO?",
+        body: "Virtual CFO services are ideal for fast-growing startups raising their first institutional round, SMEs scaling from ₹5 Cr to ₹50 Cr revenue, family businesses going through generational transition, and companies preparing for mergers, acquisitions, or IPO. If your finance function has outgrown a bookkeeper but doesn't yet justify a full-time CFO, a Virtual CFO bridges the gap.",
+        image: img.meetingRoom,
+        align: "right",
+      },
+      {
+        heading: "How AXIAFIN's Virtual CFO Engagement Works",
+        body: "Every engagement starts with a 30-day discovery phase — we audit your current finance function, identify gaps, and build a 12-month roadmap. From there, we operate as an embedded part of your leadership team — joining board meetings, owning the MIS calendar, leading investor conversations, and ensuring statutory compliance never slips. Most clients stay with us for 18+ months as they scale.",
+        image: img.growth,
+        align: "left",
+      },
+    ],
+    advantagesHeading: "Core Virtual CFO Deliverables",
+    advantagesImage: img.signing,
+    advantages: [
+      {
+        icon: TrendingUp,
+        title: "Financial Strategy & Planning",
+        desc: "Annual operating plan, 3-year financial model, scenario planning, and capital allocation strategy — built collaboratively with the founder/CEO.",
+      },
+      {
+        icon: ClipboardList,
+        title: "MIS & Management Reporting",
+        desc: "Monthly MIS dashboards with KPIs, variance analysis, unit economics, and board-pack preparation tailored to your investors' format.",
+      },
+      {
+        icon: HandCoins,
+        title: "Cash-Flow & Treasury",
+        desc: "13-week rolling cash forecast, working-capital optimisation, banking relationships, and FX hedging where applicable.",
+      },
+      {
+        icon: Rocket,
+        title: "Fundraising Support",
+        desc: "Financial due-diligence prep, investor deck financials, term-sheet review, and post-close 100-day integration planning.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Governance & Compliance",
+        desc: "Board calendar ownership, statutory audit coordination, ROC compliance, internal-control framework, and risk register.",
+      },
+      {
+        icon: Briefcase,
+        title: "Stakeholder Communication",
+        desc: "Investor updates, lender reviews, audit-committee presentations, and shareholder reporting — drafted and delivered by your Virtual CFO.",
+      },
+    ],
+    whyChoose: {
+      heading: "Why Choose AXIAFIN as Your Virtual CFO",
+      body: "Senior CA-led every time — no junior associate fronting the engagement. Fixed monthly retainer with transparent scope. Direct WhatsApp + email access during business hours. Quarterly strategy reviews built into the engagement. We've served founders from seed-stage SaaS through ₹100 Cr+ family businesses — and stay with them as they scale.",
+      image: img.team,
+    },
+    process: [
+      { step: "01", title: "Discovery Audit", desc: "30-day deep-dive into current finance function, controls, and gaps." },
+      { step: "02", title: "12-Month Roadmap", desc: "Prioritised plan covering MIS, controls, fundraising, and governance milestones." },
+      { step: "03", title: "Embedded Execution", desc: "Monthly close, MIS dashboards, board meetings, investor updates." },
+      { step: "04", title: "Quarterly Strategy Review", desc: "Founder/CEO sync to recalibrate priorities every quarter." },
+    ],
+    cta: {
+      headline: "Get a CFO Without the CFO Salary",
+      sub: "Book a free 30-minute discovery call with a senior partner — we'll map exactly what your finance function needs next.",
+      label: "Book Consultation",
+    },
+  },
+
+  "international-taxation": {
+    slug: "international-taxation",
+    title: "International Taxation",
+    metaTitle: "International Taxation Services | DTAA & PT Audit Advisory | AXIAFIN",
+    metaDescription:
+      "Cross-border tax advisory — DTAA optimization, Permanent Establishment (PE) audit, transfer pricing, NRI taxation, foreign asset reporting. AXIAFIN provides expert international taxation services in Hyderabad.",
+    eyebrow: "Consultancy Services",
+    hero: {
+      titleLead: "International",
+      titleAccent: "Taxation",
+      description:
+        "DTAA Advisory and PT Audit. Cross-border tax can erode margins fast — AXIAFIN's international taxation practice helps Indian businesses and individuals navigate Double Taxation Avoidance Agreements (DTAA), Permanent Establishment (PE) audits, transfer pricing, and global income reporting.",
+      image: img.exports,
+    },
+    intro: {
+      heading: "Why International Taxation Matters",
+      body: "As Indian businesses expand abroad and global firms set up in India, cross-border tax has become one of the most complex areas of compliance. A mishandled DTAA claim or an undisclosed PE can cost crores in additional tax and penalties. At AXIAFIN, our international tax practice helps you optimize legitimate treaty benefits, defend PE audits, structure cross-border transactions tax-efficiently, and stay compliant with India's ever-tightening foreign-asset disclosure rules.",
+      image: img.scale,
+    },
+    extraSections: [
+      {
+        heading: "DTAA Advisory — Treaty-Based Tax Optimization",
+        body: "India has signed Double Taxation Avoidance Agreements (DTAA) with 90+ countries. Properly invoking treaty benefits — beneficial ownership tests, tie-breaker rules, Article 5 PE thresholds, withholding-tax rates — can dramatically reduce your effective tax rate. We assist with DTAA claim preparation, Tax Residency Certificates (TRC), Form 10F filings, and beneficial-ownership documentation for inbound and outbound flows.",
+        image: img.signing,
+        align: "right",
+      },
+      {
+        heading: "Permanent Establishment (PE) Audit",
+        body: "A Permanent Establishment determination can convert a 10% withholding-tax exposure into 40%+ corporate tax in India. We conduct preventive PE audits — analysing fixed-place PE, service PE, dependent-agent PE, and the newly significant Significant Economic Presence (SEP) test — and advise on operational structures that legitimately avoid PE creation. Where PE has been triggered, we help with attribution-of-profits methodology and dispute defence.",
+        image: img.audit,
+        align: "left",
+      },
+      {
+        heading: "Transfer Pricing, NRI Returns & Foreign-Asset Disclosure",
+        body: "Beyond DTAA and PE, we handle the full international-tax stack: Transfer Pricing study and Form 3CEB filings; NRI ITR filings (ITR-2) with capital-gains optimisation; Schedule FA disclosures for foreign assets; FEMA-aligned repatriation planning; and Liberalised Remittance Scheme (LRS) advisory for residents.",
+        image: img.investor,
+        align: "right",
+      },
+    ],
+    advantagesHeading: "Our International Taxation Capabilities",
+    advantagesImage: img.signing,
+    advantages: [
+      {
+        icon: Globe,
+        title: "DTAA Treaty Mapping",
+        desc: "Coverage across India's 90+ DTAAs — beneficial-ownership analysis, TRC procurement, Form 10F filings, and withholding-tax optimisation.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "PE Audit Defence",
+        desc: "Preventive PE audits and active representation in PE-related scrutiny — fixed-place, service PE, agency PE, and SEP test.",
+      },
+      {
+        icon: ClipboardList,
+        title: "Transfer Pricing",
+        desc: "Form 3CEB, transfer-pricing study, master file, country-by-country reporting (CbCR), and APA (Advance Pricing Agreement) support.",
+      },
+      {
+        icon: UserCheck,
+        title: "NRI Taxation",
+        desc: "ITR-2 filings, dual-residency analysis under tie-breaker rules, capital-gains optimisation on Indian assets, and TDS refund recovery.",
+      },
+      {
+        icon: ScrollText,
+        title: "Schedule FA Disclosures",
+        desc: "Foreign asset reporting under Black Money Act — Schedule FA preparation, undisclosed-asset rectification, and Black Money Act compliance.",
+      },
+      {
+        icon: HandCoins,
+        title: "FEMA & LRS Advisory",
+        desc: "Liberalised Remittance Scheme structuring, ODI/FDI reporting, FCNR/NRE/NRO advisory, and repatriation planning.",
+      },
+    ],
+    whyChoose: {
+      heading: "Why Choose AXIAFIN for International Taxation",
+      body: "Our international tax team has handled DTAA matters across India–Singapore, India–US, India–UAE, India–UK, India–Mauritius, and India–Netherlands corridors. We're equally comfortable on the inbound side (foreign companies entering India) and outbound side (Indian companies expanding abroad). Every engagement is led by a senior CA with cross-border tax depth — not a generalist.",
+      image: img.team,
+    },
+    process: [
+      { step: "01", title: "Cross-Border Scoping", desc: "Map all flows — entities, countries, transaction types, treaty applicability." },
+      { step: "02", title: "DTAA & PE Analysis", desc: "Treaty benefit eligibility, PE risk diagnostic, and beneficial ownership review." },
+      { step: "03", title: "Documentation Pack", desc: "TRC, Form 10F, transfer-pricing study, and Schedule FA preparation." },
+      { step: "04", title: "Filing & Representation", desc: "ITR filing with treaty claims, plus active representation in any departmental scrutiny." },
+    ],
+    cta: {
+      headline: "Optimize Your Cross-Border Tax Position",
+      sub: "Book a free 30-minute discovery call — we'll map your DTAA and PE exposure and quantify the legitimate savings opportunity.",
+      label: "Book Consultation",
+    },
+  },
+
+  "tax-assessment-appeals": {
+    slug: "tax-assessment-appeals",
+    title: "Assessment, CIT Appeal & ITAT Representation",
+    metaTitle: "Tax Assessment & Appeal Representation | CIT(A) & ITAT | AXIAFIN",
+    metaDescription:
+      "End-to-end representation in income-tax assessments, faceless scrutiny, CIT(A) appeals, and ITAT representation. AXIAFIN's senior CAs defend you through every level of the appeal hierarchy.",
+    eyebrow: "Consultancy Services",
+    hero: {
+      titleLead: "Assessment, CIT Appeal",
+      titleAccent: "& ITAT Representation",
+      description:
+        "End-to-end Defence Across Every Appeal Level. Tax demands and adverse assessment orders shouldn't end your story — they should start the next chapter. AXIAFIN's senior CAs defend you through every level of the Income Tax appeal hierarchy: assessing officer, faceless unit, CIT(Appeals), and ITAT.",
+      image: img.scale,
+    },
+    intro: {
+      heading: "The Indian Income-Tax Appeal Hierarchy",
+      body: "When an assessment order goes against you, it isn't the final word. The Income Tax Act provides a clear escalation path: First, the Commissioner of Income Tax (Appeals) — CIT(A) — followed by the Income Tax Appellate Tribunal (ITAT), then the High Court on substantial questions of law, and finally the Supreme Court. Most matters resolve at CIT(A) or ITAT level. At AXIAFIN, we own the defence strategy across all of these forums — from drafting grounds of appeal to oral arguments before the bench.",
+      image: img.boardroom,
+    },
+    extraSections: [
+      {
+        heading: "Section 143(2) Scrutiny & Faceless Assessment",
+        body: "The first battleground is the assessment stage. Whether it's a regular Section 143(2) scrutiny or a faceless assessment under the National Faceless Assessment Centre, the quality of the response submitted at this stage determines everything that follows. We draft watertight replies with evidence indexing, statutory references, and supporting case law — giving you the best chance of a clean assessment order or, at worst, a clean record for the appeal that follows.",
+        image: img.signing,
+        align: "right",
+      },
+      {
+        heading: "CIT(A) — Commissioner of Income Tax (Appeals)",
+        body: "If the assessing officer's order is unfavourable, the first appeal lies with the CIT(A). We file Form 35 within 30 days of receiving the order, prepare grounds of appeal, draft a statement of facts, and represent you before the CIT(A) — both in physical hearings and through the faceless appeal regime. Most legitimate disputes resolve at this level.",
+        image: img.legalScale,
+        align: "left",
+      },
+      {
+        heading: "ITAT — Income Tax Appellate Tribunal",
+        body: "If the CIT(A) order also goes against you, the next forum is the ITAT — the highest fact-finding authority in tax matters. ITAT representation requires both deep tax-law knowledge and courtroom advocacy skill. We file Form 36, prepare the paper-book, marshal case law, and present oral arguments before the Bench. Many high-stakes assessments are settled here.",
+        image: img.team,
+        align: "right",
+      },
+    ],
+    advantagesHeading: "Our Representation Capabilities",
+    advantagesImage: img.signing,
+    advantages: [
+      {
+        icon: Mail,
+        title: "Section 143(2) & 143(3) Scrutiny",
+        desc: "Reply drafting, hearing attendance, evidence marshalling, and faceless-portal submissions for routine scrutiny assessments.",
+      },
+      {
+        icon: AlertTriangle,
+        title: "Section 148 / 147 Reassessment",
+        desc: "Reassessment notice analysis, objection filing, and full reassessment defence — including the post-2021 reopened-assessment regime.",
+      },
+      {
+        icon: ScrollText,
+        title: "CIT(A) Appeal Drafting",
+        desc: "Form 35 filing, grounds of appeal, statement of facts, and CIT(A) hearing representation — both physical and faceless.",
+      },
+      {
+        icon: Landmark,
+        title: "ITAT Representation",
+        desc: "Form 36 filing, paper-book preparation, case-law research, and oral advocacy before the Income Tax Appellate Tribunal.",
+      },
+      {
+        icon: FileWarning,
+        title: "Stay of Demand Applications",
+        desc: "Stay applications, instalment requests, and interim relief filings to prevent coercive recovery during pendency of appeal.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Rectification & Revision",
+        desc: "Section 154 rectification, Section 263/264 revision, and Section 245 refund-adjustment objections handled end-to-end.",
+      },
+    ],
+    whyChoose: {
+      heading: "Why Choose AXIAFIN for Tax Representation",
+      body: "Senior CA-led every hearing — no last-minute substitutions. Deep familiarity with both physical and faceless regimes. Strong case-law library and a network of tax counsel for High Court matters. Fixed engagement fees with milestone-based billing — you always know what you're paying for. We've defended assessments ranging from a single salary-discrepancy notice to multi-crore corporate scrutiny matters.",
+      image: img.team,
+    },
+    process: [
+      { step: "01", title: "Order Review", desc: "Forensic review of the order, identification of legal and factual grounds." },
+      { step: "02", title: "Strategy & Drafting", desc: "Grounds of appeal, statement of facts, case-law research, and paper-book." },
+      { step: "03", title: "Filing & Representation", desc: "Form 35 (CIT(A)) or Form 36 (ITAT) filing and active hearing representation." },
+      { step: "04", title: "Order & Follow-Through", desc: "Order reading, second-appeal options, rectification or stay-of-demand as needed." },
+    ],
+    cta: {
+      headline: "Got an Assessment Order? Don't Pay Without a Review.",
+      sub: "Share the order confidentially — within 24 hours we'll tell you the strength of an appeal and the likely outcome.",
+      label: "Book Consultation",
+    },
+  },
+
+  // ============================================================
   // AUDIT & ASSURANCE — separate pages, one per audit type
   // ============================================================
   "statutory-audit": {

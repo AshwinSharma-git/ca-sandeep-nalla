@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 export function WhyChooseUs() {
   return (
-    <section className="relative py-24 md:py-32 bg-mist overflow-hidden">
+    <section className="relative py-16 md:py-20 bg-mist overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-indigo/[0.04] rounded-full blur-3xl"
